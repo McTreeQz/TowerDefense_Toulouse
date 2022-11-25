@@ -41,10 +41,11 @@ public class Arrow : MonoBehaviour
 
     void hit()
     {
-        Instantiate(ArrowBleeding, transform.position, transform.rotation);
+        GameObject effectIns = (GameObject)Instantiate(ArrowBleeding, transform.position, transform.rotation);
+        Destroy(effectIns, 2f);
         Destroy(gameObject);
         target.GetComponent<IANavMesh>().vie -= degat;
-        Destroy(ArrowBleeding);
+        
 
 
 
