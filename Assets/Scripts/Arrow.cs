@@ -44,9 +44,10 @@ public class Arrow : MonoBehaviour
         Instantiate(ArrowBleeding, transform.position, transform.rotation);
         Destroy(gameObject);
         target.GetComponent<IANavMesh>().vie -= degat;
+        Destroy(ArrowBleeding);
 
-        
-        
+
+
     }
 }
 
