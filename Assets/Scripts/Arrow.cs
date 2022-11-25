@@ -7,8 +7,10 @@ public class Arrow : MonoBehaviour
     private Transform target;
 
     public GameObject ArrowBleeding;
+    public GameObject IANavMesh;
 
     public float speed = 70f;
+    public int degat = 1;
 
     public void Seek(Transform _target)
     {
@@ -41,6 +43,9 @@ public class Arrow : MonoBehaviour
     {
         Instantiate(ArrowBleeding, transform.position, transform.rotation);
         Destroy(gameObject);
+        target.GetComponent<IANavMesh>().vie -= degat;
+
+        
         
     }
 }
