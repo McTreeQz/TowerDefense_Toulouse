@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class node : MonoBehaviour
 {
+    public GameObject constructionEffect;
     public Color hoverColor;
     public Vector3 positionOffset;
 
@@ -27,6 +28,8 @@ public class node : MonoBehaviour
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        GameObject effectIns = (GameObject)Instantiate(constructionEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 2f);
     }
 
     private void OnMouseEnter()
