@@ -18,17 +18,18 @@ public class BuildManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject standardTurretPrefab;
+    public GameObject standardTourPrefab;
+    public GameObject arbaleteTourPrefab;
 
-    private void Start()
+    private GameObject TourToBuild;
+    
+    public GameObject GetTourToBuild()
     {
-        turretToBuild = standardTurretPrefab;
+        return TourToBuild;
     }
-
-    private GameObject turretToBuild;
-
-    public GameObject GetTurretToBuild()
+    public void SetTourToBuild(GameObject turret)
     {
-        return turretToBuild;
+        TourToBuild = turret;
     }
+    
 }
