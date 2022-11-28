@@ -44,7 +44,7 @@ public class Arrow : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(ArrowBleeding, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         Destroy(gameObject);
-        target.GetComponent<IANavMesh>().vie -= degat;
+        target.GetComponent<IANavSoldier>().vie -= degat;
         
 
 
