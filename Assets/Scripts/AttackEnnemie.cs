@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class IANavSoldier : MonoBehaviour{
-
-    public Transform movePositionTarget;
-    
-    public string NameTarget = "";
-
-    private Transform Target;
+public class AttackEnnemie : MonoBehaviour
+{
+    public Transform Target;
+    public GameObject Qui;
     private GameObject[] Ennemy;
-    private NavMeshAgent agent;
+    public string NameTarget ="";
+
+    private NavMeshAgent Agent;
 
     public float Range = 5f;
     public int vie = 3;
 
-    private void Awake()
+    void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.destination = movePositionTarget.position;
+        Agent = GetComponent<NavMeshAgent>();
+        Agent.enabled = true;
         
     }
-    private void Update()
+
+    // Update is called once per frame
+    void FixedUpdate()
     {
         Ennemy = GameObject.FindGameObjectsWithTag(NameTarget);
         float shortestDistance = Mathf.Infinity;
@@ -42,19 +43,12 @@ public class IANavSoldier : MonoBehaviour{
         if (Enemy != null && shortestDistance <= Range)
         {
             Target = Enemy.transform;
-            agent.destination = Target.position;
 
         }
-        else
-        {
-            agent.destination = movePositionTarget.position;
-        }
 
-        if (vie <= 0)
-        {
-            Destroy(gameObject);
-        }
+
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);

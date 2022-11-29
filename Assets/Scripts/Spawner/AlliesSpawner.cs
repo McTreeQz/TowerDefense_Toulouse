@@ -26,15 +26,19 @@ public class AlliesSpawner : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.isTrigger == spawnPointSoldier)
+                if (hit.collider.tag == "SpawnSoldier")
                 {
                     Debug.Log("Soldat !");
+                    SpawnSoldier();
                 }
-                else if (hit.collider.isTrigger == spawnPointCraftsman)
+                if (hit.collider.tag == "SpawnCraftsMan")
                 {
-                    Debug.Log("Réparateur");
+                    Debug.Log("CraftsMan !");
                 }
             }
+
+
+            
         }
     }
     void SpawnSoldier()

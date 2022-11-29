@@ -7,6 +7,10 @@ TagManager:
   - Ennemie
   - World
   - SpawnTour
+  - SpawnSoldier
+  - SpawnCraftsMan
+  - Allies
+  - TourAllies
   layers:
   - Default
   - TransparentFX
