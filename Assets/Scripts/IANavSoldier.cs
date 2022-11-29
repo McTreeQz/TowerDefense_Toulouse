@@ -15,6 +15,7 @@ public class IANavSoldier : MonoBehaviour{
 
     public float Range = 5f;
     public int vie = 3;
+    public int degat = 1;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class IANavSoldier : MonoBehaviour{
         {
             Target = Enemy.transform;
             agent.destination = Target.position;
+            Target.GetComponent<IANavSoldier>().vie -= degat;
 
         }
         else
@@ -58,5 +60,9 @@ public class IANavSoldier : MonoBehaviour{
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, Range);
+    }
+    void hit()
+    {
+        
     }
 }
