@@ -7,10 +7,17 @@ public class IANavSoldier : MonoBehaviour{
 
     public Transform movePositionTarget;
     
+    
     public string NameTarget = "";
 
     private Transform Target;
     private GameObject[] Ennemy;
+
+    
+    
+
+    
+    
     private NavMeshAgent agent;
 
     public float Range = 5f;
@@ -22,9 +29,13 @@ public class IANavSoldier : MonoBehaviour{
         agent = GetComponent<NavMeshAgent>();
         agent.destination = movePositionTarget.position;
         
+        
+
     }
     private void Update()
     {
+        
+
         Ennemy = GameObject.FindGameObjectsWithTag(NameTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
@@ -40,11 +51,19 @@ public class IANavSoldier : MonoBehaviour{
 
         }
 
-        if (Enemy != null && shortestDistance <= Range)
+        if (Enemy != null && shortestDistance <= Range && Enemy.CompareTag("Allies"))
         {
             Target = Enemy.transform;
             agent.destination = Target.position;
             Target.GetComponent<IANavSoldier>().vie -= degat;
+
+        }
+        else if (Enemy != null && shortestDistance <= Range && Enemy.CompareTag("TourAllies"))
+        {
+            Target = Enemy.transform;
+            agent.destination = Target.position;
+            Target.GetComponent<Tower>().vie -= degat;
+            
 
         }
         else

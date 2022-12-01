@@ -5363,28 +5363,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689697992}
   m_CullTransparentMesh: 1
---- !u!1 &697739676 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3855130354009426159, guid: 03adc0aa5ca913446a8f0705d243ceb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1857542850}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &697739683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697739676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: 466f31ca
 --- !u!1 &703096211
 GameObject:
   m_ObjectHideFlags: 0
@@ -14084,6 +14062,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3855130354009426064, guid: 03adc0aa5ca913446a8f0705d243ceb8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855130354009426065, guid: 03adc0aa5ca913446a8f0705d243ceb8,
+        type: 3}
+      propertyPath: vie
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3855130354009426065, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
       propertyPath: NameTarget
@@ -14095,6 +14083,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2598572949465555513, guid: dc563cbbccc87564d9e91db37f8f2c3b,
         type: 3}
+    - target: {fileID: 3855130354009426067, guid: 03adc0aa5ca913446a8f0705d243ceb8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3855130354009426069, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
       propertyPath: m_RootOrder
@@ -14118,7 +14111,7 @@ PrefabInstance:
     - target: {fileID: 3855130354009426069, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.290558
+      value: 43.34
       objectReference: {fileID: 0}
     - target: {fileID: 3855130354009426069, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
