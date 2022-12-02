@@ -10,7 +10,7 @@ TagManager:
   - SpawnSoldier
   - SpawnCraftsMan
   - Allies
-  - TourAllies
+  - Tower
   layers:
   - Default
   - TransparentFX

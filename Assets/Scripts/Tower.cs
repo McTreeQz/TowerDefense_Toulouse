@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshObstacle))]
+//[RequireComponent(typeof(NavMeshObstacle))]
 
 public class Tower : MonoBehaviour
 {
@@ -18,9 +18,9 @@ public class Tower : MonoBehaviour
     public float range = 15f;
     public float fireRate = 1f;
     public float fireCountDown = 0f;
-    public float vie = 100;
+    public int vie = 3;
 
-    
+
 
     private void Awake()
     {
@@ -62,7 +62,10 @@ public class Tower : MonoBehaviour
         }
 
         fireCountDown -= Time.deltaTime;
-        
+        if (vie <= 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
 
