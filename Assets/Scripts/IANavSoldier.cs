@@ -31,7 +31,7 @@ public class IANavSoldier : MonoBehaviour{
     private Transform target;
     private GameObject[] Ennemy;
 
-
+    
     
     private NavMeshAgent agent;
 
@@ -117,10 +117,7 @@ public class IANavSoldier : MonoBehaviour{
             Destroy(gameObject);
         }
     }
-    void hit()
-    {
-        target.GetComponent<Tower>().vie -= degat;
-    }
+    
 
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //            FONCTIONS DE DEBUG            //
