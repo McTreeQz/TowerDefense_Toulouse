@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class Arrow : MonoBehaviour
+public class Rock : MonoBehaviour
 {
     private Transform target;
-    private float targetSpeed;
 
     public GameObject ArrowBleeding;
     public GameObject IANavMesh;
 
-    public float speed  = 70f;
-    public float degat  = 1;
-    public float slow   = 1;
+    public float speed = 70f;
+    public int degat = 1;
 
     public void Seek(Transform _target)
     {
@@ -48,12 +45,6 @@ public class Arrow : MonoBehaviour
         Destroy(effectIns, 2f);
         Destroy(gameObject);
         target.GetComponent<IANavSoldier>().health -= degat;
-        
-        if (target.GetComponent<NavMeshAgent>().speed >= 2)
-        {
-            
-            target.GetComponent<NavMeshAgent>().speed -= slow;
-        }
 
 
 

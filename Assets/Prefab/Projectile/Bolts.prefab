@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89919709bbea48a47a29ccf3e1a6b10b, type: 2}
+  - {fileID: 2100000, guid: 752e4af185e3314449174591a1c58b4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,3 +115,4 @@ MonoBehaviour:
   IANavMesh: {fileID: 0}
   speed: 70
   degat: 3
+  slow: 0

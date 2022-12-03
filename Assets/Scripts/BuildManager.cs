@@ -18,8 +18,9 @@ public class BuildManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject standardTourPrefab;
-    public GameObject arbaleteTourPrefab;
+    public GameObject standardTowerPrefab;
+    public GameObject arbaleteTowerPrefab;
+    public GameObject bricoleTowerPrefab;
 
     private GameObject TourToBuild;
     

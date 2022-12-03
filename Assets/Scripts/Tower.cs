@@ -10,15 +10,15 @@ public class Tower : MonoBehaviour
     private Transform target;
 
 
-    public GameObject ArrowPrefab;
+    public GameObject   ArrowPrefab;
     public GameObject[] Ennemy;
 
     public Transform FirePoint;
 
-    public float range = 15f;
-    public float fireRate = 1f;
-    public float fireCountDown = 0f;
-    public int vie = 3;
+    public float    range           = 15f;
+    public float    fireRate        = 1f;
+    public float    fireCountDown   = 0f;
+    public int      vie             = 3;
 
 
 

@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89919709bbea48a47a29ccf3e1a6b10b, type: 2}
+  - {fileID: 2100000, guid: eb345c1e3f88a3040bf8a45211c12a3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,4 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrowBleeding: {fileID: 3668728463400450246, guid: 53064ee2a4550164088823f4bec79aa6,
     type: 3}
+  IANavMesh: {fileID: 0}
   speed: 70
+  degat: 1
+  slow: 0

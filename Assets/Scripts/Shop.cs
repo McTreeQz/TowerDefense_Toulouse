@@ -12,11 +12,15 @@ public class Shop : MonoBehaviour
 
     public void PurchaseStardartTour()
     {
-        buildManager.SetTourToBuild(buildManager.standardTourPrefab);
+        buildManager.SetTourToBuild(buildManager.standardTowerPrefab);
     }
 
     public void PurchaseArbaleteTour()
     {
-        buildManager.SetTourToBuild(buildManager.arbaleteTourPrefab);
+        buildManager.SetTourToBuild(buildManager.arbaleteTowerPrefab);
+    }
+    public void PurchaseBricole()
+    {
+        buildManager.SetTourToBuild(buildManager.bricoleTowerPrefab);
     }
 }

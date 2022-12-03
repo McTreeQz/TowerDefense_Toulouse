@@ -37,9 +37,9 @@ public class IANavSoldier : MonoBehaviour{
 
     [Space]
     [Header("Parameters")]
-    public float Range = 5f;             
-    public float InitHealth  = 3f;
-    public int   degat = 1;
+    public float Range          = 5f;             
+    public float InitHealth     = 3f;
+    public int   degat          = 1;
 
     public float fireRate = 1f;
     public float fireCountDown = 0f;
@@ -65,7 +65,7 @@ public class IANavSoldier : MonoBehaviour{
             Canvas_healthbar.enabled = true;
         }
 
-        Debug.Log(health / InitHealth);
+        //Debug.Log(health / InitHealth);
         Ennemy = GameObject.FindGameObjectsWithTag(NameTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
@@ -96,7 +96,7 @@ public class IANavSoldier : MonoBehaviour{
                 if (fireCountDown <= 0 && target != null)
                 {
                     target.GetComponent<IANavSoldier>().health -= degat;
-                    healthbar.fillAmount = health / InitHealth;
+                    
                     fireCountDown = 1 / fireRate;
                 }
                 
@@ -105,8 +105,8 @@ public class IANavSoldier : MonoBehaviour{
             {
                 if (fireCountDown <= 0 && target != null)
                 {
-                    Debug.Log("hit");
-                    Debug.Log(target.parent);
+                    //Debug.Log("hit");
+                    //Debug.Log(target.parent);
                     target.GetComponent<Tower>().vie -= degat;
                     fireCountDown = 1 / fireRate;
                 }
@@ -124,7 +124,7 @@ public class IANavSoldier : MonoBehaviour{
         //-------------------------------------------------------------------------
         //-------------------------------------------------------------------------
 
-        
+        healthbar.fillAmount = health / InitHealth;
 
 
         if (health <= 0)
