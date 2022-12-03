@@ -27,6 +27,7 @@ public class IANavSoldier : MonoBehaviour{
     public Transform    movePositionTarget;
     public Image        healthbar;
     public Canvas       Canvas_healthbar;
+    public GameObject   arrow;
 
     public string NameTarget = "";      // Nom du tag pour récupérer la cible
 
@@ -107,7 +108,7 @@ public class IANavSoldier : MonoBehaviour{
                 {
                     //Debug.Log("hit");
                     //Debug.Log(target.parent);
-                    target.GetComponent<Tower>().vie -= degat;
+                    target.GetComponent<Tower>().health -= degat;
                     fireCountDown = 1 / fireRate;
                 }
 

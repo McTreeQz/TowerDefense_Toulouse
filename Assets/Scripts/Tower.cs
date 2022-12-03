@@ -12,13 +12,15 @@ public class Tower : MonoBehaviour
 
     public GameObject   ArrowPrefab;
     public GameObject[] Ennemy;
+    public string       tagTarget;
+
 
     public Transform FirePoint;
 
     public float    range           = 15f;
     public float    fireRate        = 1f;
     public float    fireCountDown   = 0f;
-    public int      vie             = 3;
+    public float    health          = 3;
 
 
 
@@ -35,7 +37,7 @@ public class Tower : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Ennemy = GameObject.FindGameObjectsWithTag("Ennemie");
+        Ennemy = GameObject.FindGameObjectsWithTag(tagTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
 
@@ -62,7 +64,7 @@ public class Tower : MonoBehaviour
         }
 
         fireCountDown -= Time.deltaTime;
-        if (vie <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }

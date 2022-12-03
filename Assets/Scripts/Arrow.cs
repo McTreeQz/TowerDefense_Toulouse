@@ -47,17 +47,26 @@ public class Arrow : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(ArrowBleeding, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         Destroy(gameObject);
-        target.GetComponent<IANavSoldier>().health -= degat;
         
-        if (target.GetComponent<NavMeshAgent>().speed >= 2)
+
+       
+        if (target.tag == "Tower")
         {
-            
-            target.GetComponent<NavMeshAgent>().speed -= slow;
+
+            target.GetComponent<Tower>().health -= degat;
+
         }
+        else if (target.tag == "Ennemie")
+        {
 
+            target.GetComponent<IANavSoldier>().health -= degat;
+            if (target.GetComponent<NavMeshAgent>().speed >= 2)
+            {
 
+                target.GetComponent<NavMeshAgent>().speed -= slow;
+            }
 
-
+        }
     }
 }
 
