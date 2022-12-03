@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 
 /// <summary>
 /// 
-/// IA de l(ennemi blabla utiliser comme ça...
+/// IA des soldats sur le terrains.
 /// 
 /// 
 /// 
@@ -16,29 +17,28 @@ using UnityEngine.AI;
 //L'objectif de ce script est de donner aux ennemis et aux alliés la capacité d'utiliser un navmesh afin de s'orienter dans l'espace
 //
 //
-//Pour l'instant le code fonctionne de cette facon...
+//Le code est modulaire et permet d'être utilisé pour les ennemis mais aussi les alliés
 //Peut être que je devrais faire CA plutot comme CA mais pour l'instant voila...
 
 public class IANavSoldier : MonoBehaviour{
 
     [Space]
     [Header("References")]
-    public Transform movePositionTarget;
-    
-    
-    public string NameTarget = "";      // Nom du tag pour récupérer blabla
+    public Transform    movePositionTarget;
+    public Image        healthbar;
+    public Canvas       Canvas_healthbar;
 
-    private Transform target;
-    private GameObject[] Ennemy;
+    public string NameTarget = "";      // Nom du tag pour récupérer la cible
 
-    
-    
-    private NavMeshAgent agent;
+    private Transform       target;
+    private GameObject[]    Ennemy;
+    private NavMeshAgent    agent;
+    public  float           health;
 
     [Space]
     [Header("Parameters")]
-    public float Range = 5f;             //Range expruimée en machin, il faudra p-e changer plus tard...
-    public int   vie   = 3;
+    public float Range = 5f;             
+    public float InitHealth  = 3f;
     public int   degat = 1;
 
     public float fireRate = 1f;
@@ -48,15 +48,24 @@ public class IANavSoldier : MonoBehaviour{
     {
         agent = GetComponent<NavMeshAgent>();
         agent.destination = movePositionTarget.position;
-        
-        
+        health = InitHealth;
+
 
     }
+    
 
     private void Update()
     {
-        
+        if (health == InitHealth)
+        {
+            Canvas_healthbar.enabled = false;
+        }
+        else
+        {
+            Canvas_healthbar.enabled = true;
+        }
 
+        Debug.Log(health / InitHealth);
         Ennemy = GameObject.FindGameObjectsWithTag(NameTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
@@ -73,12 +82,12 @@ public class IANavSoldier : MonoBehaviour{
         }
 
         //--------------------------------------------------------------------//
-        //                       Condition de machin                          //
+        //                          Take Damage                               //
         //--------------------------------------------------------------------//
 
         if (Enemy != null && shortestDistance <= Range)
         {
-            Debug.Log("hara");
+            
             target = Enemy.transform;
             agent.destination = target.position;
 
@@ -86,15 +95,21 @@ public class IANavSoldier : MonoBehaviour{
             {
                 if (fireCountDown <= 0 && target != null)
                 {
-                    target.GetComponent<IANavSoldier>().vie -= degat;
+                    target.GetComponent<IANavSoldier>().health -= degat;
+                    healthbar.fillAmount = health / InitHealth;
                     fireCountDown = 1 / fireRate;
                 }
+                
             }
             else if (target.tag == "Tower")
             {
-                Debug.Log("hit");
-                Debug.Log(target.parent);
-                target.GetComponent<Tower>().vie -= degat;
+                if (fireCountDown <= 0 && target != null)
+                {
+                    Debug.Log("hit");
+                    Debug.Log(target.parent);
+                    target.GetComponent<Tower>().vie -= degat;
+                    fireCountDown = 1 / fireRate;
+                }
 
             }
             
@@ -108,16 +123,16 @@ public class IANavSoldier : MonoBehaviour{
         fireCountDown -= Time.deltaTime;
         //-------------------------------------------------------------------------
         //-------------------------------------------------------------------------
-        
 
         
 
-        if (vie <= 0)
+
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
-    
+
 
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //            FONCTIONS DE DEBUG            //
