@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class AlliesSpawner : MonoBehaviour
 {
+    [Space]
+    [Header("Prefab")]
     [SerializeField]
     private Transform SoldierPrefab;
     [SerializeField]
     private Transform CraftsmanPrefab;
+
+    [Space]
+    [Header("Spawner")]
     [SerializeField]
     private Transform spawnPointSoldier;
     [SerializeField]
     private Transform spawnPointCraftsman;
+
+    [Space]
+    [Header("cost")]
+    public int SoldierCost = 50;
+    public int CraftsmanCost = 20;
+
     void Start()
     {
         
@@ -28,13 +39,34 @@ public class AlliesSpawner : MonoBehaviour
             {
                 if (hit.collider.tag == "SpawnSoldier")
                 {
-                    //Debug.Log("Soldat !");
-                    SpawnSoldier();
+                    if (PlayerStats.money >= SoldierCost)
+                    {
+                        //Debug.Log("Soldat !");
+                        SpawnSoldier();
+                        PlayerStats.money -= SoldierCost;
+                    }
+                    else
+                    {
+                        Debug.Log("pas assez d'argent");
+                        return;
+                    }
+                    
                 }
                 if (hit.collider.tag == "SpawnCraftsMan")
                 {
                     //Debug.Log("CraftsMan !");
-                    SpawnCraftsMan();
+                    
+                    if (PlayerStats.money >= CraftsmanCost)
+                    {
+                        //Debug.Log("Soldat !");
+                        SpawnCraftsMan();
+                        PlayerStats.money -= CraftsmanCost;
+                    }
+                    else
+                    {
+                        Debug.Log("pas assez d'argent");
+                        return;
+                    }
                 }
             }
 

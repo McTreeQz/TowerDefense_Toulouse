@@ -46,7 +46,12 @@ public class IANavSoldier : MonoBehaviour{
     public int   degat          = 1;
 
     public float fireRate = 1f;
-    public float fireCountDown = 0f;
+    public float fireCountDown  = 0f;
+
+    [Space]
+    public int   GoldReward     = 25;
+
+
 
     private void Awake()
     {
@@ -146,8 +151,15 @@ public class IANavSoldier : MonoBehaviour{
         healthbar.fillAmount = health / InitHealth;
 
 
-        if (health <= 0)
+        if (health <= 0 && gameObject.CompareTag("Ennemie"))
         {
+            PlayerStats.money += GoldReward;
+            Destroy(gameObject);
+        }
+
+        else if (health <= 0 )
+        {
+            
             Destroy(gameObject);
         }
     }

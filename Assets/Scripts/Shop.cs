@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public TowerCosts ArrowTower;
+    public TowerCosts BricoleTower;
+    public TowerCosts CrossbowTower;
 
     private BuildManager buildManager;
 
@@ -12,15 +15,15 @@ public class Shop : MonoBehaviour
 
     public void PurchaseStardartTour()
     {
-        buildManager.SetTourToBuild(buildManager.standardTowerPrefab);
+        buildManager.SetTourToBuild(ArrowTower);
     }
 
     public void PurchaseArbaleteTour()
     {
-        buildManager.SetTourToBuild(buildManager.arbaleteTowerPrefab);
+        buildManager.SetTourToBuild(CrossbowTower);
     }
     public void PurchaseBricole()
     {
-        buildManager.SetTourToBuild(buildManager.bricoleTowerPrefab);
+        buildManager.SetTourToBuild(BricoleTower);
     }
 }

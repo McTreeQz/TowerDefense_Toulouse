@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int _enemyAlives = 0;
+
     [SerializeField]
     private Transform enemyPrefab;
+
     [SerializeField]
     private Transform spawnPoint;
+
     [SerializeField]
     private float timeBetweenWaves = 5f;
 
@@ -49,5 +53,6 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        _enemyAlives++;
     }
 }

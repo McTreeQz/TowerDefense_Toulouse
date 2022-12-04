@@ -26,12 +26,7 @@ public class Tower : MonoBehaviour
 
     private void Awake()
     {
-        
 
-        
-
-
-        
         
     }
 

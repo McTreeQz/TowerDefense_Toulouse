@@ -22,13 +22,25 @@ public class BuildManager : MonoBehaviour
     public GameObject arbaleteTowerPrefab;
     public GameObject bricoleTowerPrefab;
 
-    private GameObject TourToBuild;
+    private TowerCosts TourToBuild;
     
-    public GameObject GetTourToBuild()
+    public bool canBuild { get { return TourToBuild != null; } }
+
+    public void buildTowerOn(node node)
     {
-        return TourToBuild;
+        if (PlayerStats.money >= TourToBuild.cost)
+        {
+            GameObject tower = Instantiate(TourToBuild.prefab, node.transform.position, Quaternion.identity);
+            node.turret = tower;
+        }
+        else
+        {
+            return;
+        }
+        
     }
-    public void SetTourToBuild(GameObject turret)
+    
+    public void SetTourToBuild(TowerCosts turret)
     {
         TourToBuild = turret;
     }

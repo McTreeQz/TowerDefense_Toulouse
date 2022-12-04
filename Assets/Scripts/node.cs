@@ -7,8 +7,8 @@ public class node : MonoBehaviour
     public GameObject constructionEffect;
     public Color hoverColor;
     public Vector3 positionOffset;
+    public GameObject turret;
 
-    private GameObject turret;
     private Color startColor;
     private Renderer rend;
 
@@ -24,7 +24,7 @@ public class node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(buildManager.GetTourToBuild() == null)
+        if(!buildManager.canBuild)
         {
             return;
         }
@@ -34,16 +34,15 @@ public class node : MonoBehaviour
             Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
             return;
         }
-
-        GameObject turretToBuild = buildManager.GetTourToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
-        GameObject effectIns = (GameObject)Instantiate(constructionEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2f);
+        //if (PlayerStats.money ) 
+        // {
+        buildManager.buildTowerOn(this);
+        //}
     }
 
     private void OnMouseEnter()
     {
-        if (buildManager.GetTourToBuild() == null)
+        if (!buildManager.canBuild)
         {
             return;
         }
