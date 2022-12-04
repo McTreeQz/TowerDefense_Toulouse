@@ -155,6 +155,7 @@ public class IANavSoldier : MonoBehaviour{
         {
             PlayerStats.money += GoldReward;
             Destroy(gameObject);
+            WaveSpawner._enemyAlives--;
         }
 
         else if (health <= 0 )

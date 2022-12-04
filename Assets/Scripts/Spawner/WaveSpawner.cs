@@ -15,7 +15,6 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField]
     private float timeBetweenWaves = 5f;
-
     private float countdown = 2f;
 
     [SerializeField]
@@ -26,11 +25,16 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_enemyAlives > 0)
+        {
+            return;
+        }
         if (countdown<= 0f)
         {
             StartCoroutine(spawnWave());
 
             countdown = timeBetweenWaves;
+            return;
             
         }
 

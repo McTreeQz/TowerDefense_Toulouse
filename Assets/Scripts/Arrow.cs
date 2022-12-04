@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Arrow : MonoBehaviour
 {
     private Transform target;
-    private float targetSpeed;
+    
 
     public GameObject ArrowBleeding;
     public GameObject IANavMesh;

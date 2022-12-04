@@ -238,6 +238,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &4143163
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +482,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &52719820
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +515,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 802014192}
+  - {fileID: 1325406981}
   m_Father: {fileID: 1002498734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -544,8 +547,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 0.83721054, b: 0.8156863, a: 1}
+    m_SelectedColor: {r: 1, g: 0.8745098, b: 0.45882353, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.6666667}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -605,7 +608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c1dcf7ac95f8f9e4ea8bd64945184fca, type: 3}
+  m_Texture: {fileID: 2800000, guid: cdeeeb300c7926d47a31aba9d2376e50, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -727,6 +730,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &94651180
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +877,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &106815192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1155,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &159368056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1465,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &207951808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1612,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &226166469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1728,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &241454874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,6 +1999,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &281456801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,6 +2115,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &309970491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2231,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &313904333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2392,83 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &365346404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365346405}
+  - component: {fileID: 365346407}
+  - component: {fileID: 365346406}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &365346405
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365346404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 425300736}
+  m_Father: {fileID: 1771613114}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -99.8}
+  m_SizeDelta: {x: -49.4139, y: -115.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &365346406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365346404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &365346407
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365346404}
+  m_CullTransparentMesh: 1
 --- !u!1 &367663081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,6 +2708,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!4 &401019927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dc0f91aefa2e4f44a9c2a92da6853635,
@@ -2838,6 +2928,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &422397066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +3044,87 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
+--- !u!1 &425300735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425300736}
+  - component: {fileID: 425300738}
+  - component: {fileID: 425300737}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &425300736
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425300735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 365346405}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00053787, y: 0.000036716}
+  m_SizeDelta: {x: 100.59, y: 34.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &425300737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425300735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 150
+--- !u!222 &425300738
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425300735}
+  m_CullTransparentMesh: 1
 --- !u!1 &426280665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,6 +3336,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &439752214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,6 +3452,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &449692473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3599,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &473573897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,6 +3715,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &475006872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,6 +3831,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &487024630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,6 +3947,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &522876551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,6 +4291,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &547664784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,6 +4478,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!43 &586175676
 Mesh:
   m_ObjectHideFlags: 0
@@ -4609,6 +4789,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1001 &621907110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4964,6 +5145,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &665396191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,6 +5789,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &740941711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5722,6 +5905,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &742479307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +6021,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &776878976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,6 +6137,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &779215698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,6 +6284,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &787904384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,6 +6568,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &826574834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 839279605429070942, guid: 379783a3b7442344d8a633857291beb9,
@@ -6403,6 +6591,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 1, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &827047345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6680,6 +6869,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &883335897
 GameObject:
   m_ObjectHideFlags: 0
@@ -7140,6 +7330,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &933974451
 GameObject:
   m_ObjectHideFlags: 0
@@ -7255,6 +7446,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &948229120
 GameObject:
   m_ObjectHideFlags: 0
@@ -7467,6 +7659,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1001 &956916741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7810,6 +8003,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &970626769
 GameObject:
   m_ObjectHideFlags: 0
@@ -7956,6 +8150,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &975172843
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,7 +8325,7 @@ GameObject:
   - component: {fileID: 1002498735}
   - component: {fileID: 1002498737}
   m_Layer: 5
-  m_Name: Shop
+  m_Name: UI_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8151,12 +8346,13 @@ RectTransform:
   - {fileID: 52719821}
   - {fileID: 1502003620}
   - {fileID: 1771613114}
+  - {fileID: 1265533064}
   m_Father: {fileID: 179703086}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 3}
+  m_AnchoredPosition: {x: 0, y: -33}
   m_SizeDelta: {x: 1533.49, y: 751.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002498735
@@ -8209,6 +8405,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae5b38d12f04de4eb216dad5d6f4062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArrowTower:
+    prefab: {fileID: 7789789470865395254, guid: 7772e650662e8c0499b3dd33d6365732,
+      type: 3}
+    cost: 100
+  BricoleTower:
+    prefab: {fileID: 7789789470865395254, guid: aa82fa7f4b8d3da4f80a9168ad6238fc,
+      type: 3}
+    cost: 75
+  CrossbowTower:
+    prefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
+      type: 3}
+    cost: 150
 --- !u!1 &1028773366
 GameObject:
   m_ObjectHideFlags: 0
@@ -8324,6 +8532,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1030032488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8601,6 +8810,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1069771759
 GameObject:
   m_ObjectHideFlags: 0
@@ -8778,6 +8988,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1079048286
 GameObject:
   m_ObjectHideFlags: 0
@@ -8893,6 +9104,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1083097532
 GameObject:
   m_ObjectHideFlags: 0
@@ -9039,6 +9251,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1101379892
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,6 +9464,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1123860819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9397,6 +9611,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1180759549
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,6 +9727,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1184192445
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,6 +9936,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1242883786
 GameObject:
   m_ObjectHideFlags: 0
@@ -9835,6 +10052,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1245316124
 GameObject:
   m_ObjectHideFlags: 0
@@ -10047,6 +10265,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1261660254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10192,6 +10411,101 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
+--- !u!1 &1265533063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265533064}
+  - component: {fileID: 1265533067}
+  - component: {fileID: 1265533066}
+  - component: {fileID: 1265533065}
+  m_Layer: 5
+  m_Name: UI_Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1265533064
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265533063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1002498734}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -406.97156, y: 323.9719}
+  m_SizeDelta: {x: 203.2569, y: 60.8562}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1265533065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265533063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: gold
+--- !u!114 &1265533066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265533063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0004ef69db9fa4a44b3ac23410969e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneytext: {fileID: 1265533065}
+--- !u!222 &1265533067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265533063}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1271675876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10386,6 +10700,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1304859826
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,6 +10732,83 @@ Transform:
   m_Father: {fileID: 487024631}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1325406980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325406981}
+  - component: {fileID: 1325406983}
+  - component: {fileID: 1325406982}
+  m_Layer: 5
+  m_Name: Panel (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1325406981
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325406980}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1615344503}
+  m_Father: {fileID: 52719821}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -99.8}
+  m_SizeDelta: {x: -49.4139, y: -115.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1325406982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325406980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1325406983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325406980}
+  m_CullTransparentMesh: 1
 --- !u!1 &1340080838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 839279605523212650, guid: 379783a3b7442344d8a633857291beb9,
@@ -10439,6 +10831,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 1, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1001 &1341908296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10633,6 +11026,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1372712879
 GameObject:
   m_ObjectHideFlags: 0
@@ -10748,6 +11142,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!4 &1372908238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: dc0f91aefa2e4f44a9c2a92da6853635,
@@ -10869,6 +11264,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1404317999
 GameObject:
   m_ObjectHideFlags: 0
@@ -11146,6 +11542,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1483694860
 GameObject:
   m_ObjectHideFlags: 0
@@ -11312,6 +11709,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1781157588}
+  - {fileID: 1577263699}
   m_Father: {fileID: 1002498734}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11343,8 +11741,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.9433962, g: 0.5743305, b: 0.51174796, a: 1}
+    m_SelectedColor: {r: 1, g: 0.873043, b: 0.4575472, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.6666667}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11404,7 +11802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c3b45fd5cf533cf4aa010bbce777c1f9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 99291a5ca56dd0a408040b37de676f6c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -11526,6 +11924,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1518638767
 GameObject:
   m_ObjectHideFlags: 0
@@ -11623,6 +12022,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1530644587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530644588}
+  - component: {fileID: 1530644590}
+  - component: {fileID: 1530644589}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1530644588
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1577263699}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00053787, y: 0.000036716}
+  m_SizeDelta: {x: 100.59, y: 34.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1530644589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 150
+--- !u!222 &1530644590
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644587}
+  m_CullTransparentMesh: 1
 --- !u!1 &1530767151
 GameObject:
   m_ObjectHideFlags: 0
@@ -12015,6 +12494,8 @@ MonoBehaviour:
     type: 3}
   bricoleTowerPrefab: {fileID: 7789789470865395254, guid: aa82fa7f4b8d3da4f80a9168ad6238fc,
     type: 3}
+  ConstructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
+    type: 3}
 --- !u!114 &1573132093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12047,7 +12528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 40
+  startMoney: 500
 --- !u!1001 &1575320638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12127,6 +12608,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc0f91aefa2e4f44a9c2a92da6853635, type: 3}
+--- !u!1 &1577263698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577263699}
+  - component: {fileID: 1577263701}
+  - component: {fileID: 1577263700}
+  m_Layer: 5
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1577263699
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577263698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1530644588}
+  m_Father: {fileID: 1502003620}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -99.8}
+  m_SizeDelta: {x: -49.4139, y: -115.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1577263700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577263698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1577263701
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577263698}
+  m_CullTransparentMesh: 1
 --- !u!1 &1585493995
 GameObject:
   m_ObjectHideFlags: 0
@@ -12310,6 +12868,87 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
+--- !u!1 &1615344502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615344503}
+  - component: {fileID: 1615344505}
+  - component: {fileID: 1615344504}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1615344503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615344502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1325406981}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00053787, y: 0.000036716}
+  m_SizeDelta: {x: 100.59, y: 34.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1615344504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615344502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 100
+--- !u!222 &1615344505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615344502}
+  m_CullTransparentMesh: 1
 --- !u!1 &1621749537
 GameObject:
   m_ObjectHideFlags: 0
@@ -12680,6 +13319,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1669712775
 GameObject:
   m_ObjectHideFlags: 0
@@ -12857,6 +13497,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1736716256
 GameObject:
   m_ObjectHideFlags: 0
@@ -12972,6 +13613,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1749515014
 GameObject:
   m_ObjectHideFlags: 0
@@ -13165,6 +13807,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1769247451
 GameObject:
   m_ObjectHideFlags: 0
@@ -13234,6 +13877,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 689697993}
+  - {fileID: 365346405}
   m_Father: {fileID: 1002498734}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13265,8 +13909,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.9716981, g: 0.5821022, b: 0.5821022, a: 1}
+    m_SelectedColor: {r: 1, g: 0.8745098, b: 0.45882353, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.6666667}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -13326,7 +13970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 84e9a6c4d1364854b96ab1e041dec7da, type: 3}
+  m_Texture: {fileID: 2800000, guid: ee04da392a4ad994da059e1002e12d09, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -13645,6 +14289,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1829909233
 GameObject:
   m_ObjectHideFlags: 0
@@ -13953,6 +14598,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1001 &1857542850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14207,6 +14853,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1877799551
 GameObject:
   m_ObjectHideFlags: 0
@@ -14353,6 +15000,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1915734248
 GameObject:
   m_ObjectHideFlags: 0
@@ -14468,6 +15116,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1918530542
 GameObject:
   m_ObjectHideFlags: 0
@@ -14583,6 +15232,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1929330639
 GameObject:
   m_ObjectHideFlags: 0
@@ -14828,6 +15478,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &1940738531
 GameObject:
   m_ObjectHideFlags: 0
@@ -15280,6 +15931,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2015927532
 GameObject:
   m_ObjectHideFlags: 0
@@ -15526,6 +16178,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2031380519
 GameObject:
   m_ObjectHideFlags: 0
@@ -15708,6 +16361,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2048235510
 GameObject:
   m_ObjectHideFlags: 0
@@ -15823,6 +16477,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2066039284
 GameObject:
   m_ObjectHideFlags: 0
@@ -16131,6 +16786,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2111952410
 GameObject:
   m_ObjectHideFlags: 0
@@ -16277,6 +16933,7 @@ MonoBehaviour:
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
 --- !u!1 &2131604340
 GameObject:
   m_ObjectHideFlags: 0

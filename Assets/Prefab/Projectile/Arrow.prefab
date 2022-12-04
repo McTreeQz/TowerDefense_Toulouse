@@ -113,6 +113,6 @@ MonoBehaviour:
   ArrowBleeding: {fileID: 3668728463400450246, guid: 53064ee2a4550164088823f4bec79aa6,
     type: 3}
   IANavMesh: {fileID: 0}
-  speed: 70
+  speed: 50
   degat: 1
   slow: 0

@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour
     public GameObject standardTowerPrefab;
     public GameObject arbaleteTowerPrefab;
     public GameObject bricoleTowerPrefab;
+    public GameObject ConstructionEffect;
 
     private TowerCosts TourToBuild;
     
@@ -30,7 +31,10 @@ public class BuildManager : MonoBehaviour
     {
         if (PlayerStats.money >= TourToBuild.cost)
         {
+            PlayerStats.money -= TourToBuild.cost;
             GameObject tower = Instantiate(TourToBuild.prefab, node.transform.position, Quaternion.identity);
+            GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, node.transform.position, node.transform.rotation);
+            Destroy(effectIns, 2f);
             node.turret = tower;
         }
         else
