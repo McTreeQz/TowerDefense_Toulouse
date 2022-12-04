@@ -28,12 +28,13 @@ public class AlliesSpawner : MonoBehaviour
             {
                 if (hit.collider.tag == "SpawnSoldier")
                 {
-                    Debug.Log("Soldat !");
+                    //Debug.Log("Soldat !");
                     SpawnSoldier();
                 }
                 if (hit.collider.tag == "SpawnCraftsMan")
                 {
-                    Debug.Log("CraftsMan !");
+                    //Debug.Log("CraftsMan !");
+                    SpawnCraftsMan();
                 }
             }
 

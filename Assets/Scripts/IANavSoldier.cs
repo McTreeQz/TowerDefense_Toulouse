@@ -32,6 +32,8 @@ public class IANavSoldier : MonoBehaviour{
     public string NameTarget = "";      // Nom du tag pour récupérer la cible
 
     private Transform       target;
+    private Transform       initHealth;
+
     private GameObject[]    Ennemy;
     private NavMeshAgent    agent;
     public  float           health;
@@ -40,6 +42,7 @@ public class IANavSoldier : MonoBehaviour{
     [Header("Parameters")]
     public float Range          = 5f;             
     public float InitHealth     = 3f;
+    public float care           = 1f;
     public int   degat          = 1;
 
     public float fireRate = 1f;
@@ -102,7 +105,7 @@ public class IANavSoldier : MonoBehaviour{
                 }
                 
             }
-            else if (target.tag == "Tower")
+            else if (target.tag == "Tower" && gameObject.CompareTag("Ennemie"))
             {
                 if (fireCountDown <= 0 && target != null)
                 {
@@ -110,6 +113,21 @@ public class IANavSoldier : MonoBehaviour{
                     //Debug.Log(target.parent);
                     target.GetComponent<Tower>().health -= degat;
                     fireCountDown = 1 / fireRate;
+                }
+
+            }
+            else if (target.tag == "Tower" && gameObject.CompareTag("Allies"))
+            {
+                if (fireCountDown <= 0 && target != null && target.GetComponent<Tower>().health <= target.GetComponent<HealthBarTower>().InitHealth)
+                {
+                    //Debug.Log("hit");
+                    //Debug.Log(target.parent);
+                    target.GetComponent<Tower>().health += care;
+                    fireCountDown = 1 / fireRate;
+                }
+                else if (target.GetComponent<Tower>().health >= target.GetComponent<HealthBarTower>().InitHealth)
+                {
+                    agent.destination = movePositionTarget.position;
                 }
 
             }

@@ -3797,12 +3797,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522876551}
   m_LocalRotation: {x: -0, y: 0.7070617, z: -0, w: 0.70715195}
-  m_LocalPosition: {x: -44.716938, y: -2.88, z: -17.503418}
+  m_LocalPosition: {x: 0.003063202, y: 1.88, z: -25.503578}
   m_LocalScale: {x: 4, y: 3.78, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 547664785}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &522876553
 BoxCollider:
@@ -4143,7 +4143,7 @@ Transform:
   m_Children:
   - {fileID: 948229124}
   - {fileID: 1123860820}
-  - {fileID: 522876552}
+  - {fileID: 588649239}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4463,6 +4463,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &588649238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588649239}
+  m_Layer: 3
+  m_Name: CraftManSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588649239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588649238}
+  m_LocalRotation: {x: -0, y: 0.7070617, z: -0, w: 0.70715195}
+  m_LocalPosition: {x: -44.719494, y: 0.7199999, z: -14.45}
+  m_LocalScale: {x: 4, y: 3.78, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 547664785}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621331789
 GameObject:
   m_ObjectHideFlags: 0
@@ -5365,7 +5396,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -9103,7 +9134,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106940660
 GameObject:
@@ -9831,7 +9862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245316124}
   m_LocalRotation: {x: -0, y: 0.7070617, z: -0, w: 0.70715195}
-  m_LocalPosition: {x: 0, y: 2.1, z: 1.5000315}
+  m_LocalPosition: {x: 0, y: 2, z: 1.5000315}
   m_LocalScale: {x: 4, y: 3.78, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11997,9 +12028,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoldierPrefab: {fileID: 1233677476967571399, guid: 307a094fe5612e049a4a42e264881705,
     type: 3}
-  CraftsmanPrefab: {fileID: 0}
+  CraftsmanPrefab: {fileID: 1233677476967571399, guid: 4d5092786dd20454b83d949add84e228,
+    type: 3}
   spawnPointSoldier: {fileID: 1123860820}
-  spawnPointCraftsman: {fileID: 522876552}
+  spawnPointCraftsman: {fileID: 588649239}
 --- !u!1001 &1575320638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13152,7 +13184,7 @@ Transform:
   - {fileID: 1586300528}
   - {fileID: 722203975}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771613113
 GameObject:
@@ -16275,7 +16307,7 @@ PrefabInstance:
     - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
         type: 3}
