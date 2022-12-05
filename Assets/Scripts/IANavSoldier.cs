@@ -65,6 +65,7 @@ public class IANavSoldier : MonoBehaviour{
 
     private void Update()
     {
+        
         if (health == InitHealth)
         {
             Canvas_healthbar.enabled = false;
@@ -145,11 +146,22 @@ public class IANavSoldier : MonoBehaviour{
             agent.destination = movePositionTarget.position;
         }
         fireCountDown -= Time.deltaTime;
-        //-------------------------------------------------------------------------
-        //-------------------------------------------------------------------------
+
+        //--------------------------------------------------------------------//
+        //                          Health system                             //
+        //--------------------------------------------------------------------//
 
         healthbar.fillAmount = health / InitHealth;
 
+        if (agent.remainingDistance <= 1)
+        {
+            if (gameObject.CompareTag("Ennemie"))
+            {
+                PlayerStats.healthPlayer--;
+                WaveSpawner._enemyAlives--;
+                Destroy(gameObject);
+            }
+        }
 
         if (health <= 0 && gameObject.CompareTag("Ennemie"))
         {

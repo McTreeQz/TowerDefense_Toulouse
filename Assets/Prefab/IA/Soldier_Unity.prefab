@@ -212,17 +212,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20906b352c167de42a99f36828eaf43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePositionTarget: {fileID: 2598572949465555513, guid: dc563cbbccc87564d9e91db37f8f2c3b,
+  movePositionTarget: {fileID: 8797094305303352197, guid: dc563cbbccc87564d9e91db37f8f2c3b,
     type: 3}
   healthbar: {fileID: 3907221442530043991}
   Canvas_healthbar: {fileID: 3907221441399562698}
+  arrow: {fileID: 0}
   NameTarget: Allies
   health: 0
   Range: 5
   InitHealth: 3
+  care: 1
   degat: 1
   fireRate: 1
   fireCountDown: 0
+  GoldReward: 25
 --- !u!195 &3907221442312435612
 NavMeshAgent:
   m_ObjectHideFlags: 0

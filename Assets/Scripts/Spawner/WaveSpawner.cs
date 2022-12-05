@@ -7,8 +7,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int _enemyAlives = 0;
 
-    [SerializeField]
-    private Transform enemyPrefab;
+    public WaveStats[] waves;
 
     [SerializeField]
     private Transform spawnPoint;
@@ -43,20 +42,26 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator spawnWave()
     {
+        WaveStats wave = waves[waveNumber];
+
+        for (int i = 0; i < wave.count; i++)
+        {
+            SpawnEnemy(wave.enemy);
+            yield return new WaitForSeconds(1/ wave.timer);
+        }
+
         waveNumber++;
 
-        for (int i = 0; i < waveNumber; i++)
+        if(waveNumber == waves.Length)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(1.5f);
+            this.enabled = false;
         }
-        
 
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         _enemyAlives++;
     }
 }
