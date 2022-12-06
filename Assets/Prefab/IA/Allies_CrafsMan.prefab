@@ -142,12 +142,13 @@ MonoBehaviour:
   arrow: {fileID: 0}
   NameTarget: Tower
   health: 0
-  Range: 5
+  Range: 10
   InitHealth: 10
   care: 1
   degat: 0
   fireRate: 1
   fireCountDown: 0
+  GoldReward: 25
 --- !u!1 &6065350363060689130
 GameObject:
   m_ObjectHideFlags: 0

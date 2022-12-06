@@ -470,3 +470,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 2325354354042239780}
   Canvas_healthbar: {fileID: 7007380589963913842}
+  InitHealth: 0

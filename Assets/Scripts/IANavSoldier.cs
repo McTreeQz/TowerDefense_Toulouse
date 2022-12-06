@@ -124,16 +124,18 @@ public class IANavSoldier : MonoBehaviour{
             }
             else if (target.tag == "Tower" && gameObject.CompareTag("Allies"))
             {
-                if (fireCountDown <= 0 && target != null && target.GetComponent<Tower>().health <= target.GetComponent<HealthBarTower>().InitHealth)
+                if (fireCountDown <= 0 && target != null && target.GetComponent<Tower>().health < target.GetComponent<HealthBarTower>().InitHealth)
                 {
                     //Debug.Log("hit");
                     //Debug.Log(target.parent);
                     target.GetComponent<Tower>().health += care;
                     fireCountDown = 1 / fireRate;
+                    return;
                 }
                 else if (target.GetComponent<Tower>().health >= target.GetComponent<HealthBarTower>().InitHealth)
                 {
                     agent.destination = movePositionTarget.position;
+                    return;
                 }
 
             }
