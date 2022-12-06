@@ -13,6 +13,7 @@ public class Tower : MonoBehaviour
     public GameObject   ArrowPrefab;
     public GameObject[] Ennemy;
     public string       tagTarget;
+    
 
 
     public Transform FirePoint;
@@ -31,7 +32,8 @@ public class Tower : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+    {   
+        
         Ennemy = GameObject.FindGameObjectsWithTag(tagTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;

@@ -13,19 +13,24 @@ public class Menu : MonoBehaviour
         
         
     }
-    public void BackMenu()
-    {
-        SceneManager.LoadScene(1);
-
-    }
-    public void BattleMenu()
+    public void StartMenu()
     {
         SceneManager.LoadScene(2);
 
     }
-    public void battle721()
+    public void BackMenu()
+    {
+        SceneManager.LoadScene(2);
+
+    }
+    public void BattleMenu()
     {
         SceneManager.LoadScene(3);
+
+    }
+    public void battle721()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public void battle1218()

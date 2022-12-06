@@ -297,6 +297,7 @@ MonoBehaviour:
     type: 3}
   Ennemy: []
   tagTarget: Tower
+  tagTarget2: Allies
   FirePoint: {fileID: 3161265938104520523}
   range: 15
   fireRate: 1
