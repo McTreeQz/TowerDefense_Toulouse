@@ -12669,7 +12669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 125
+  startMoney: 9999
   start_healthPlayer: 5
 --- !u!1001 &1575320638
 PrefabInstance:
