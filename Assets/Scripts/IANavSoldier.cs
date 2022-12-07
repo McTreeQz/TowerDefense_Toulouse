@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 
 /// <summary>
@@ -34,6 +35,9 @@ public class IANavSoldier : MonoBehaviour{
     private Transform       target;
     private Transform       initHealth;
 
+    private AudioSource audioSource;
+    
+
     private GameObject[]    Ennemy;
     private NavMeshAgent    agent;
     public  float           health;
@@ -51,6 +55,12 @@ public class IANavSoldier : MonoBehaviour{
     [Space]
     public int   GoldReward     = 25;
 
+    [Space]
+    [Header("Bruitage")]
+    public AudioClip Combat         =null;
+    public AudioClip EnnemyDeath    =null;
+    public AudioClip AlliesDeath    =null;
+    public AudioClip GainMoney      =null;
 
 
     private void Awake()
@@ -59,9 +69,14 @@ public class IANavSoldier : MonoBehaviour{
         agent.destination = movePositionTarget.position;
         health = InitHealth;
 
-
+        audioSource = GetComponent<AudioSource>();
+        
+        
     }
-    
+    private void FixedUpdate()
+    {
+        
+    }
 
     private void Update()
     {
@@ -167,9 +182,12 @@ public class IANavSoldier : MonoBehaviour{
 
         if (health <= 0 && gameObject.CompareTag("Ennemie"))
         {
+            audioSource.PlayOneShot(EnnemyDeath);
             PlayerStats.money += GoldReward;
+            
             Destroy(gameObject);
             WaveSpawner._enemyAlives--;
+            
         }
 
         else if (health <= 0 )

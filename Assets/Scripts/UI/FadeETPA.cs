@@ -1,11 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FadeETPA : MonoBehaviour
 {
-    public Animator transition;
+    public float transitionTime = 10f;
+
+    void Update()
+    {
+        StartCoroutine(videoComplete());
+
+
+    }
+
+    IEnumerator videoComplete()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(1);
+    }
+}
+
+
+
+/*public Animator transition;
 
     public float transitionTime = 10f;
     private int levelToLoad;
@@ -34,6 +51,4 @@ public class FadeETPA : MonoBehaviour
         transition.Play("ETPA");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelToLoad);
-    }
-
-}
+    }*/

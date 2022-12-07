@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    
+    public GameObject battleMenu;
 
     
 
     private void Start()
     {
-        
+        battleMenu.SetActive(false);
+
         
     }
     public void StartMenu()
@@ -20,12 +21,12 @@ public class Menu : MonoBehaviour
     }
     public void BackMenu()
     {
-        SceneManager.LoadScene(2);
+        battleMenu.SetActive(false);
 
     }
     public void BattleMenu()
     {
-        SceneManager.LoadScene(3);
+        battleMenu.SetActive(true);
 
     }
     public void battle721()
