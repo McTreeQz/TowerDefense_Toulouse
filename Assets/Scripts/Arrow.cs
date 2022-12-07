@@ -54,6 +54,7 @@ public class Arrow : MonoBehaviour
         {
 
             target.GetComponent<Tower>().health -= degat;
+            
 
         }
         else if (target.tag == "Ennemie")

@@ -32,14 +32,15 @@ public class IANavSoldier : MonoBehaviour{
 
     public string NameTarget = "";      // Nom du tag pour récupérer la cible
 
-    private Transform       target;
-    private Transform       initHealth;
 
-    private AudioSource audioSource;
-    
+    private Transform        target;
+    private Transform        initHealth;
+    private AudioSource      audioSource;
+    private GameObject[]     Ennemy;
+    private NavMeshAgent     agent;
+    private bool isPlaying = false;
 
-    private GameObject[]    Ennemy;
-    private NavMeshAgent    agent;
+
     public  float           health;
 
     [Space]
@@ -73,10 +74,7 @@ public class IANavSoldier : MonoBehaviour{
         
         
     }
-    private void FixedUpdate()
-    {
-        
-    }
+    
 
     private void Update()
     {
@@ -180,12 +178,12 @@ public class IANavSoldier : MonoBehaviour{
             }
         }
 
-        if (health <= 0 && gameObject.CompareTag("Ennemie"))
+        if (health <= 0 && gameObject.CompareTag("Ennemie") && isPlaying == false)
         {
-            audioSource.PlayOneShot(EnnemyDeath);
+
+            isPlaying = true;
             PlayerStats.money += GoldReward;
-            
-            Destroy(gameObject);
+            StartCoroutine(death());
             WaveSpawner._enemyAlives--;
             
         }
@@ -193,11 +191,19 @@ public class IANavSoldier : MonoBehaviour{
         else if (health <= 0 )
         {
             
-            Destroy(gameObject);
+            
         }
     }
 
-
+    IEnumerator death()
+    {
+        //agent.destination = agent.transform.position;
+        audioSource.PlayOneShot(EnnemyDeath);
+        yield return new WaitForSeconds(0.3f);
+        audioSource.PlayOneShot(GainMoney);
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);
+    }
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //            FONCTIONS DE DEBUG            //
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/

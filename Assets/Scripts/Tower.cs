@@ -8,32 +8,52 @@ using UnityEngine.AI;
 public class Tower : MonoBehaviour
 {
     private Transform target;
-
-
-    public GameObject   ArrowPrefab;
-    public GameObject[] Ennemy;
-    public string       tagTarget;
+    private bool isplaying = false;
+    private Transform towertargetPos;
     
 
+    BuildManager build;
 
-    public Transform FirePoint;
 
+    [Space]
+    [Header("Référence")]
+    public  GameObject      ArrowPrefab;
+    private GameObject[]    Ennemy;
+    public  string          tagTarget;
+    public  Transform       FirePoint;
+
+    [Space]
+    [Header("Paramêtre")]
     public float    range           = 15f;
     public float    fireRate        = 1f;
     public float    fireCountDown   = 0f;
     public float    health          = 3;
+    public float    speedConstruct  = 2;
 
-
+    [Space]
+    [Header("AudioEffect")]
+    public AudioClip soundFire  = null;
+    public AudioClip soundDeath = null;
+    public AudioClip soundBuild = null;
+    private AudioSource audiosource;
 
     private void Awake()
     {
+        audiosource = GetComponent<AudioSource>();
 
+        build = GetComponent<BuildManager>();
         
     }
 
     private void FixedUpdate()
-    {   
-        
+    {
+        Debug.Log(build.targetTower);
+        if (towertargetPos.position == gameObject.transform.position)
+        {
+            Vector3 dir = towertargetPos.position - gameObject.transform.position;
+            gameObject.transform.Translate(dir.normalized * (speedConstruct * Time.deltaTime), Space.World);
+        }
+
         Ennemy = GameObject.FindGameObjectsWithTag(tagTarget);
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
@@ -61,9 +81,12 @@ public class Tower : MonoBehaviour
         }
 
         fireCountDown -= Time.deltaTime;
-        if (health <= 0)
+        if (health <= 0 && isplaying == false)
         {
-            Destroy(gameObject);
+            isplaying = true;
+            
+
+            StartCoroutine(death());
         }
         
     }
@@ -75,8 +98,17 @@ public class Tower : MonoBehaviour
 
         if(arrow != null)
         {
+            audiosource.PlayOneShot(soundFire);
             arrow.Seek(target.transform);
         }
+    }
+
+    IEnumerator death()
+    {
+        
+        audiosource.PlayOneShot(soundDeath);
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

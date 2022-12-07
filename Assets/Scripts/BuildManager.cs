@@ -23,17 +23,28 @@ public class BuildManager : MonoBehaviour
     public GameObject bricoleTowerPrefab;
     public GameObject ConstructionEffect;
 
+    public float speed = 1;
+
+    public GameObject tower;
     private TowerCosts TourToBuild;
+    public Transform targetTower;
+    public Vector3 initBuild;
     
     public bool canBuild { get { return TourToBuild != null; } }
 
     public void buildTowerOn(node node)
     {
+        targetTower = node.transform;
+        initBuild = node.transform.position;
+        initBuild = new Vector3(initBuild.x, initBuild.y-5, initBuild.z);
+
         if (PlayerStats.money >= TourToBuild.cost)
         {
             PlayerStats.money -= TourToBuild.cost;
-            GameObject tower = Instantiate(TourToBuild.prefab, node.transform.position, Quaternion.identity);
-            GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, node.transform.position, node.transform.rotation);
+            tower = Instantiate(TourToBuild.prefab, initBuild, Quaternion.identity);
+            
+
+            GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, tower.transform.position, tower.transform.rotation);
             Destroy(effectIns, 2f);
             node.turret = tower;
         }
@@ -43,10 +54,15 @@ public class BuildManager : MonoBehaviour
         }
         
     }
-    
+    private void Update()
+    {
+        
+    }
+
     public void SetTourToBuild(TowerCosts turret)
     {
         TourToBuild = turret;
     }
+
     
 }
