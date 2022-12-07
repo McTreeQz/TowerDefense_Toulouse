@@ -23,6 +23,9 @@ public class BuildManager : MonoBehaviour
     public GameObject bricoleTowerPrefab;
     public GameObject ConstructionEffect;
 
+    public AudioClip soundBuild = null;
+    private AudioSource audiosource;
+
     public float speed = 1;
 
     public GameObject tower;

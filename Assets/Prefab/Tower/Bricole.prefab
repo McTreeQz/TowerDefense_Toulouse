@@ -128,18 +128,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3313077942705382877}
-  m_LocalRotation: {x: 0.06607158, y: 0.70401317, z: -0.06607158, w: 0.70401317}
-  m_LocalPosition: {x: 0, y: 0, z: -0.37132263}
+  m_LocalRotation: {x: 0.09025546, y: 0.9616999, z: -0.024183879, w: 0.25768673}
+  m_LocalPosition: {x: 0, y: 0, z: -6.708851}
   m_LocalScale: {x: 0.45999998, y: 0.34999996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7939602194361951642}
   m_Father: {fileID: 6561318154709768863}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 10.723, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.338, y: 150.435, z: 9.313}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5.9189262, y: 3.2497478}
+  m_AnchoredPosition: {x: 6.08, y: 4.11}
   m_SizeDelta: {x: 7.11, y: 0.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7007380589963913842
@@ -456,6 +456,7 @@ MonoBehaviour:
   fireRate: 1
   fireCountDown: 0
   health: 3
+  speedConstruct: 2
   soundFire: {fileID: 8300000, guid: 5f0816dba0f143a4d8d781bb0ece4d18, type: 3}
   soundDeath: {fileID: 8300000, guid: 1ba23710a5362864f91bd41624b3d917, type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}

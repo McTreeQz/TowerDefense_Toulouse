@@ -10,15 +10,15 @@ public class Tower : MonoBehaviour
     private Transform target;
     private bool isplaying = false;
     private Transform towertargetPos;
-    
+    private GameObject[] Ennemy;
+    private Vector3 test;
 
-    BuildManager build;
+    //BuildManager build;
 
 
     [Space]
     [Header("Référence")]
     public  GameObject      ArrowPrefab;
-    private GameObject[]    Ennemy;
     public  string          tagTarget;
     public  Transform       FirePoint;
 
@@ -28,7 +28,7 @@ public class Tower : MonoBehaviour
     public float    fireRate        = 1f;
     public float    fireCountDown   = 0f;
     public float    health          = 3;
-    public float    speedConstruct  = 2;
+    public float    speedConstruct  = 0.2f;
 
     [Space]
     [Header("AudioEffect")]
@@ -40,18 +40,24 @@ public class Tower : MonoBehaviour
     private void Awake()
     {
         audiosource = GetComponent<AudioSource>();
-
-        build = GetComponent<BuildManager>();
+        towertargetPos = transform;
+    }
+    private void Start()
+    {
         
+        test = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(build.targetTower);
-        if (towertargetPos.position == gameObject.transform.position)
+       
+
+        if (test.y > transform.position.y)
         {
-            Vector3 dir = towertargetPos.position - gameObject.transform.position;
-            gameObject.transform.Translate(dir.normalized * (speedConstruct * Time.deltaTime), Space.World);
+            audiosource.PlayOneShot(soundBuild);
+            Vector3 dir = test - transform.position;
+
+            transform.Translate(dir.normalized * (speedConstruct * Time.deltaTime), Space.World);
         }
 
         Ennemy = GameObject.FindGameObjectsWithTag(tagTarget);
