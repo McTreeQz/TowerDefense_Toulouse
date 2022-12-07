@@ -300,13 +300,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArrowPrefab: {fileID: 5629590701581248377, guid: 053f17dfe92788540970e61b48156b0a,
     type: 3}
-  Ennemy: []
   tagTarget: Tower
   FirePoint: {fileID: 3161265938104520523}
   range: 15
   fireRate: 1
   fireCountDown: 0
   health: 3
+  speedConstruct: 2
+  soundFire: {fileID: 0}
+  soundDeath: {fileID: 0}
+  soundBuild: {fileID: 0}
 --- !u!82 &196836335
 AudioSource:
   m_ObjectHideFlags: 0

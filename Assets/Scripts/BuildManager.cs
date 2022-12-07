@@ -28,16 +28,21 @@ public class BuildManager : MonoBehaviour
 
     public float speed = 1;
 
-    public GameObject tower;
+    private GameObject tower;
     private TowerCosts TourToBuild;
-    public Transform targetTower;
+   
     public Vector3 initBuild;
+    
     
     public bool canBuild { get { return TourToBuild != null; } }
 
+    private void Start()
+    {
+        audiosource = GetComponent<AudioSource>();
+    }
     public void buildTowerOn(node node)
     {
-        targetTower = node.transform;
+        
         initBuild = node.transform.position;
         initBuild = new Vector3(initBuild.x, initBuild.y-5, initBuild.z);
 
@@ -45,9 +50,9 @@ public class BuildManager : MonoBehaviour
         {
             PlayerStats.money -= TourToBuild.cost;
             tower = Instantiate(TourToBuild.prefab, initBuild, Quaternion.identity);
-            
+            audiosource.PlayOneShot(soundBuild);
 
-            GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, tower.transform.position, tower.transform.rotation);
+            GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, node.transform.position, node.transform.rotation);
             Destroy(effectIns, 2f);
             node.turret = tower;
         }

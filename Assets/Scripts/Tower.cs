@@ -52,9 +52,9 @@ public class Tower : MonoBehaviour
     {
        
 
-        if (test.y > transform.position.y)
+        if (test.y > transform.position.y && gameObject.CompareTag("Tower"))
         {
-            audiosource.PlayOneShot(soundBuild);
+            //audiosource.PlayOneShot(soundBuild);
             Vector3 dir = test - transform.position;
 
             transform.Translate(dir.normalized * (speedConstruct * Time.deltaTime), Space.World);
