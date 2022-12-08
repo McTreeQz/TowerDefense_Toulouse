@@ -12,12 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Logo du jeu.unity
     guid: d96623e5e781fb84a993eaca8795dfa3
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: cabb88ec1e4273549ad87758822a557a
-  - enabled: 1
-    path: Assets/Scenes/MenuBattle.unity
-    guid: b871074637047cd4083c260472282a90
-  - enabled: 1
     path: Assets/Scenes/Terrain2.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   m_configObjects: {}
