@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20906b352c167de42a99f36828eaf43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePositionTarget: {fileID: 8797094305303352197, guid: dc563cbbccc87564d9e91db37f8f2c3b,
+  movePositionTarget: {fileID: 1016337904817819449, guid: dc563cbbccc87564d9e91db37f8f2c3b,
     type: 3}
   healthbar: {fileID: 3907221442530043991}
   Canvas_healthbar: {fileID: 3907221441399562698}
