@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class Tower : MonoBehaviour
 {
     private Transform target;
+
     private bool isplaying = false;
     private Transform towertargetPos;
     private GameObject[] Ennemy;
@@ -18,6 +19,7 @@ public class Tower : MonoBehaviour
 
     [Space]
     [Header("Référence")]
+    public  Transform       scorpion;
     public  GameObject      ArrowPrefab;
     public  string          tagTarget;
     public  Transform       FirePoint;
@@ -95,6 +97,13 @@ public class Tower : MonoBehaviour
             StartCoroutine(death());
         }
         
+    }
+    private void Update()
+    {
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookdirection = Quaternion.LookRotation(dir);
+        Vector3 rotation = lookdirection.eulerAngles;
+        scorpion.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void fire()

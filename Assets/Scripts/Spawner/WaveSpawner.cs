@@ -7,19 +7,21 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int _enemyAlives = 0;
 
+    private WaveStats  waveStats;
     public WaveStats[] waves;
 
     [SerializeField]
     private Transform spawnPoint;
 
     [SerializeField]
-    private float timeBetweenWaves = 5f;
+    float timeBetweenWaves = 5f;
     private float countdown = 2f;
 
     [SerializeField]
     private Text waveCountDown;
 
     private int waveNumber = 0;
+    //private int enemyNumber = 0;
 
     // Update is called once per frame
     void Update()
@@ -44,10 +46,11 @@ public class WaveSpawner : MonoBehaviour
     {
         WaveStats wave = waves[waveNumber];
 
-        for (int i = 0; i < wave.count; i++)
+        for (int i = 0; i < wave.enemy.Length; i++)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1/ wave.timer);
+            
+            SpawnEnemy(wave.enemy[i]);
+            yield return new WaitForSeconds( wave.timerBetweenEnemy);
         }
 
         waveNumber++;
@@ -58,9 +61,11 @@ public class WaveSpawner : MonoBehaviour
         }
 
     }
+    
 
     void SpawnEnemy(GameObject enemy)
     {
+        
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         _enemyAlives++;
     }

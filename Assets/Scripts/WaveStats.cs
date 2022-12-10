@@ -4,9 +4,13 @@ using UnityEngine;
 public class WaveStats 
 {
 
-    public GameObject enemy;
-    public int count;
-    public float timer;
+    public GameObject [] enemy;
+    //public int count;
+    
+    public float timerBetweenEnemy;
+
+
+
 
 
 }
