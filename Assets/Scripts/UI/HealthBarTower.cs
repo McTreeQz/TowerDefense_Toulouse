@@ -20,16 +20,21 @@ using UnityEngine.UI;
 
 public class HealthBarTower : MonoBehaviour
 {
+    
     public Image    healthbar;
     public Canvas   Canvas_healthbar;
 
+   
+
     public  float InitHealth;
     private float health;
+
     
+
     void Awake()
     {
         InitHealth = GetComponent<Tower>().health;
-
+        
     }
 
     // Update is called once per frame
@@ -39,7 +44,7 @@ public class HealthBarTower : MonoBehaviour
         health = GetComponent<Tower>().health;
         
         //Debug.Log(health);
-        
+
 
         if (health == InitHealth)
         {
@@ -49,6 +54,10 @@ public class HealthBarTower : MonoBehaviour
         {
             Canvas_healthbar.enabled = true;
         }
+
+        
+
+       
 
         healthbar.fillAmount = health / InitHealth; // me permet d'avoir un chiffre entre 0 et 1 peut importe le chiffre de base.
         

@@ -26,7 +26,7 @@ public class BuildManager : MonoBehaviour
     public AudioClip soundBuild = null;
     private AudioSource audiosource;
 
-    public float speed = 1;
+    public float ConstructionSpeed = 1;
 
     private GameObject tower;
     private TowerCosts TourToBuild;
@@ -67,9 +67,9 @@ public class BuildManager : MonoBehaviour
         
     }
 
-    public void SetTourToBuild(TowerCosts turret)
+    public void SetTourToBuild(TowerCosts tower)
     {
-        TourToBuild = turret;
+        TourToBuild = tower;
     }
 
     

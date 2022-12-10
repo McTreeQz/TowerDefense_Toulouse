@@ -1,14 +1,11 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AlliesSpawner : MonoBehaviour
 {
-    [Space]
-    [Header("Prefab")]
-    [SerializeField]
-    private Transform SoldierPrefab;
-    [SerializeField]
-    private Transform CraftsmanPrefab;
+    public GameObject soldier;
+    public GameObject craftsman;
 
     [Space]
     [Header("Spawner")]
@@ -18,67 +15,74 @@ public class AlliesSpawner : MonoBehaviour
     private Transform spawnPointCraftsman;
 
     [Space]
-    [Header("cost")]
-    public int SoldierCost = 50;
-    public int CraftsmanCost = 20;
+    [Header("Timer")]
+    public float timerCraftsman = 15;
+    public float initTimerCraftMan;
+    public Button craftmanspawner;
 
-    void Start()
+    public float timerSoldier = 3;
+    public float initTimerSoldier;
+    public Button soldierspawner;
+
+
+    private bool craftmanisActive = false;
+    private bool soldierisActive = false;
+    
+
+
+    private void Start()
     {
-        
-    }
 
+        initTimerSoldier = timerSoldier;
+
+        initTimerCraftMan = timerCraftsman;
+
+
+
+    }
     // Update is called once per frame
     void Update()
+
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+        
+            if (craftmanisActive == true)
             {
-                if (hit.collider.tag == "SpawnSoldier")
-                {
-                    if (PlayerStats.money >= SoldierCost)
-                    {
-                        //Debug.Log("Soldat !");
-                        SpawnSoldier();
-                        PlayerStats.money -= SoldierCost;
-                    }
-                    else
-                    {
-                        Debug.Log("pas assez d'argent");
-                        return;
-                    }
-                    
-                }
-                if (hit.collider.tag == "SpawnCraftsMan")
-                {
-                    //Debug.Log("CraftsMan !");
-                    
-                    if (PlayerStats.money >= CraftsmanCost)
-                    {
-                        //Debug.Log("Soldat !");
-                        SpawnCraftsMan();
-                        PlayerStats.money -= CraftsmanCost;
-                    }
-                    else
-                    {
-                        Debug.Log("pas assez d'argent");
-                        return;
-                    }
-                }
+                craftmanspawner.interactable = false;
+                timerCraftsman -= Time.deltaTime;
             }
+            if (timerCraftsman <= 0)
+            {
+                craftmanspawner.interactable = true;
+                timerCraftsman = initTimerCraftMan;
+                craftmanisActive = false;
+            }
+        
+        
+            if (soldierisActive == true)
+            {
+                soldierspawner.interactable = false;
+                timerSoldier -= Time.deltaTime;
+            }
+            if (timerSoldier <= 0)
+            {
+                soldierspawner.interactable = true;
+                timerSoldier = initTimerSoldier;
+                soldierisActive = false;
+            }
+        
 
+        
 
-            
-        }
     }
-    void SpawnSoldier()
+    public void SpawnSoldier()
     {
-        Instantiate(SoldierPrefab, spawnPointSoldier.position, spawnPointSoldier.rotation);
+        Instantiate(soldier, spawnPointSoldier.position, spawnPointSoldier.rotation);
+        soldierisActive = true;
     }
-    void SpawnCraftsMan()
+    public void SpawnCraftsMan()
     {
-        Instantiate(CraftsmanPrefab, spawnPointCraftsman.position, spawnPointCraftsman.rotation);
+        Instantiate(craftsman, spawnPointSoldier.position, spawnPointSoldier.rotation);
+        craftmanisActive = true;
     }
 }
+

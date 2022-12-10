@@ -11,6 +11,7 @@ TagManager:
   - SpawnCraftsMan
   - Allies
   - Tower
+  - craftsmanButton
   layers:
   - Default
   - TransparentFX

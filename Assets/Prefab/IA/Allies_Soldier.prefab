@@ -139,13 +139,20 @@ MonoBehaviour:
     type: 3}
   healthbar: {fileID: 2135638500100593037}
   Canvas_healthbar: {fileID: 9078527657277963280}
+  arrow: {fileID: 0}
   NameTarget: Ennemie
   health: 0
   Range: 5
   InitHealth: 10
+  care: 1
   degat: 2
   fireRate: 1
   fireCountDown: 0
+  GoldReward: 25
+  Combat: {fileID: 0}
+  EnnemyDeath: {fileID: 0}
+  AlliesDeath: {fileID: 0}
+  GainMoney: {fileID: 0}
 --- !u!1 &6065350363060689130
 GameObject:
   m_ObjectHideFlags: 0
