@@ -6,8 +6,11 @@ using TMPro;
 
 
 
-public class dialogueManager : MonoBehaviour
+public class IntroManager : MonoBehaviour
 {
+    public GameObject GameManager;
+    
+    
     public GameObject dialogue;
     public TextMeshProUGUI textComponent;
 
@@ -18,23 +21,21 @@ public class dialogueManager : MonoBehaviour
 
     private int index;
     public bool isActive = false;
+   
+    
 
     private void Start()
     {
+        
+        
         textComponent.text = string.Empty;
         StartDialogue();
+        
     }
     private void Update()
     {
-        /*if (textComponent.text == lines[index])
-        {
-            nextLine();
-        }
-        else
-        {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-        }*/
+        
+        
     }
 
     void StartDialogue()
@@ -52,7 +53,7 @@ public class dialogueManager : MonoBehaviour
     }
     public void nextLine()
     {
-        Debug.Log("next");
+        //Debug.Log("next");
         
 
       if (index < lines.Length - 1)

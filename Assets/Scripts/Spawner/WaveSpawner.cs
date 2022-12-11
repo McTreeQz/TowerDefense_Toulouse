@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class WaveSpawner : MonoBehaviour
 {
-    public GameObject dialogueManager;
+    public GameObject intro;
+    public GameObject outro;
     public static int _enemyAlives = 0;
 
     private WaveStats  waveStats;
@@ -24,18 +26,16 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 0;
     //private int enemyNumber = 0;
 
-
     private bool begin = false;
-    private void Awake()
-    {
-        
-    }
+    public bool End = false;
+    
 
     // Update is called once per frame
     void Update()
     {
-        begin = dialogueManager.GetComponent<dialogueManager>().isActive;
-        Debug.Log(begin);
+        
+        begin = intro.GetComponent<IntroManager>().isActive;
+        Debug.Log(_enemyAlives);
         if (begin == true)
         {
             if (_enemyAlives > 0)
@@ -53,6 +53,16 @@ public class WaveSpawner : MonoBehaviour
 
             countdown -= Time.deltaTime;
             waveCountDown.text = Mathf.Floor(countdown).ToString();
+
+            if (waveNumber >= waves.Length && _enemyAlives == 0)
+            {
+                
+                StopCoroutine(spawnWave());
+                outro.SetActive(true);
+
+
+            }
+
         }
         
     }
@@ -69,11 +79,7 @@ public class WaveSpawner : MonoBehaviour
 
         waveNumber++;
 
-        if(waveNumber == waves.Length)
-        {
-            this.enabled = false;
-        }
-
+       
     }
     
 

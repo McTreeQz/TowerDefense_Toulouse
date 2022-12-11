@@ -100,10 +100,14 @@ public class Tower : MonoBehaviour
     }
     private void Update()
     {
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookdirection = Quaternion.LookRotation(dir);
-        Vector3 rotation = lookdirection.eulerAngles;
-        scorpion.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        if (target != null)
+        {
+            Vector3 dir = target.position - transform.position;
+            Quaternion lookdirection = Quaternion.LookRotation(dir);
+            Vector3 rotation = lookdirection.eulerAngles;
+            scorpion.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        }
+        
     }
 
     void fire()
