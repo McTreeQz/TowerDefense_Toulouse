@@ -12,14 +12,18 @@ public class Menu : MonoBehaviour
     public GameObject title;
     public GameObject book;
     public GameObject fondu;
+    public GameObject fondLivre;
+    public GameObject fondLivreBataille;
     public GameObject videoIntro;
     public GameObject lunchGame;
+
 
     private bool videoIsactive = false;
     
 
     private void Start()
     {
+        fondLivreBataille.SetActive(false);
         lunchGame.SetActive(false);
         videoIntro.SetActive(false);
         fondu.SetActive(false);
@@ -47,9 +51,9 @@ public class Menu : MonoBehaviour
                 animator.SetTrigger(trigger);
             }
         }
-        if (fondu != null)
+        if (fondLivre != null)
         {
-            var animator = fondu.GetComponent<Animator>();
+            var animator = fondLivre.GetComponent<Animator>();
             if (animator != null)
             {
                 
@@ -72,6 +76,9 @@ public class Menu : MonoBehaviour
     }
     public void BattleMenu()
     {
+        fondLivre.SetActive(false);
+        mainMenu.SetActive(false);
+        fondLivreBataille.SetActive(true);
         battleMenu.SetActive(true);
 
     }
