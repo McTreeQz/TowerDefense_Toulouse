@@ -13,11 +13,14 @@ public class Menu : MonoBehaviour
     public GameObject book;
     public GameObject fondu;
     public GameObject videoIntro;
-    
+    public GameObject lunchGame;
+
+    private bool videoIsactive = false;
     
 
     private void Start()
     {
+        lunchGame.SetActive(false);
         videoIntro.SetActive(false);
         fondu.SetActive(false);
         battleMenu.SetActive(false);
@@ -77,9 +80,13 @@ public class Menu : MonoBehaviour
         //Trigger("start");
         fondu.SetActive(true);
         videoIntro.SetActive(true);
+        videoIsactive = true;
+
 
     }
 
+    
+    
     public void battle1218()
     {
         Debug.Log("1218");
@@ -88,11 +95,26 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("1814");
     }
+    public void playGame()
+    {
+        SceneManager.LoadScene(2);
+    }
     private void Update()
     {
-
+        if (videoPlayer.isPlaying == false && videoIsactive == true )
+        {
+            lunchGame.SetActive(true);
+        }
+        else
+        {
+            lunchGame.SetActive(false);
+        }
         
+
+
     }
+    
+    
     
     
 }
