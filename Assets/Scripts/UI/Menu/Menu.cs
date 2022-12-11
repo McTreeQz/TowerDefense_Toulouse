@@ -1,21 +1,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class Menu : MonoBehaviour
 {
+    VideoPlayer videoPlayer;
+    
     public GameObject battleMenu;
     public GameObject mainMenu;
     public GameObject title;
     public GameObject book;
+    public GameObject fondu;
+    public GameObject videoIntro;
     
     
 
     private void Start()
     {
+        videoIntro.SetActive(false);
+        fondu.SetActive(false);
         battleMenu.SetActive(false);
         title.SetActive(true);
 
+        videoPlayer = GetComponent<VideoPlayer>();
 
     }
     private void Trigger(string trigger)
@@ -36,7 +44,17 @@ public class Menu : MonoBehaviour
                 animator.SetTrigger(trigger);
             }
         }
+        if (fondu != null)
+        {
+            var animator = fondu.GetComponent<Animator>();
+            if (animator != null)
+            {
+                
+                animator.SetTrigger(trigger);
+            }
+        }
     }
+    
     public void StartMenu()
     {
         
@@ -56,7 +74,10 @@ public class Menu : MonoBehaviour
     }
     public void battle721()
     {
-        SceneManager.LoadScene(2);
+        //Trigger("start");
+        fondu.SetActive(true);
+        videoIntro.SetActive(true);
+
     }
 
     public void battle1218()
@@ -72,4 +93,6 @@ public class Menu : MonoBehaviour
 
         
     }
+    
+    
 }
