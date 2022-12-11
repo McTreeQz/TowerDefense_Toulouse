@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public GameObject dialogueManager;
     public static int _enemyAlives = 0;
 
     private WaveStats  waveStats;
@@ -15,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
 
     [SerializeField]
     float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    private float countdown = 5f;
 
     [SerializeField]
     private Text waveCountDown;
@@ -23,24 +24,37 @@ public class WaveSpawner : MonoBehaviour
     private int waveNumber = 0;
     //private int enemyNumber = 0;
 
+
+    private bool begin = false;
+    private void Awake()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (_enemyAlives > 0)
+        begin = dialogueManager.GetComponent<dialogueManager>().isActive;
+        Debug.Log(begin);
+        if (begin == true)
         {
-            return;
-        }
-        if (countdown<= 0f)
-        {
-            StartCoroutine(spawnWave());
+            if (_enemyAlives > 0)
+            {
+                return;
+            }
+            if (countdown <= 0f)
+            {
+                StartCoroutine(spawnWave());
 
-            countdown = timeBetweenWaves;
-            return;
-            
-        }
+                countdown = timeBetweenWaves;
+                return;
 
-        countdown -= Time.deltaTime;
-        waveCountDown.text = Mathf.Floor(countdown).ToString();
+            }
+
+            countdown -= Time.deltaTime;
+            waveCountDown.text = Mathf.Floor(countdown).ToString();
+        }
+        
     }
     IEnumerator spawnWave()
     {
