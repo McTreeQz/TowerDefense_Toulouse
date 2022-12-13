@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -6,16 +8,32 @@ using UnityEngine.Video;
 public class Menu : MonoBehaviour
 {
     VideoPlayer videoPlayer;
-    
+
+
+    [Space]
+    [Header("Référence")]
     public GameObject battleMenu;
     public GameObject mainMenu;
     public GameObject title;
     public GameObject book;
-    public GameObject fondu;
     public GameObject fondLivre;
     public GameObject fondLivreBataille;
     public GameObject videoIntro;
     public GameObject lunchGame;
+
+    [Space]
+    [Header("Audio")]
+    public AudioClip pageQuiTourne = null;
+    public AudioClip boutonValide = null;
+    public AudioClip boutonRetour = null;
+    public AudioClip boutonPlay = null;
+    public AudioClip cinematique = null;
+    public AudioClip BO = null;
+
+    private AudioSource audioSource;
+    private float volumeBO = 0f;
+    private float maxVolumeBO = 0.09f;
+    public AudioSource bandeOriginale;
 
 
     private bool videoIsactive = false;
@@ -23,10 +41,12 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        
+        audioSource = GetComponent<AudioSource>();
         fondLivreBataille.SetActive(false);
         lunchGame.SetActive(false);
         videoIntro.SetActive(false);
-        fondu.SetActive(false);
+        
         battleMenu.SetActive(false);
         title.SetActive(true);
 
@@ -64,18 +84,25 @@ public class Menu : MonoBehaviour
     
     public void StartMenu()
     {
-        
+        boutonValid();
         Trigger("Open");
         title.SetActive(false);
 
     }
     public void BackMenu()
     {
+        boutonBack();
+        mainMenu.SetActive(true);
         battleMenu.SetActive(false);
+        fondLivreBataille.SetActive(false);
+        fondLivre.SetActive(true);
+        Tourne();
 
     }
     public void BattleMenu()
     {
+        boutonValid();
+        Tourne();
         fondLivre.SetActive(false);
         mainMenu.SetActive(false);
         fondLivreBataille.SetActive(true);
@@ -85,7 +112,10 @@ public class Menu : MonoBehaviour
     public void battle721()
     {
         //Trigger("start");
-        fondu.SetActive(true);
+        //fondu.SetActive(true);
+        maxVolumeBO = 0;
+        boutonValid();
+        Tourne();
         videoIntro.SetActive(true);
         videoIsactive = true;
 
@@ -96,18 +126,37 @@ public class Menu : MonoBehaviour
     
     public void battle1218()
     {
+        boutonBack();
+        Tourne();
         Debug.Log("1218");
     }
     public void battle1814()
     {
+        boutonBack();
+        Tourne();
+        Debug.Log("1814");
+    }
+    public void Option()
+    {
+        boutonBack();
+        
+        Debug.Log("1814");
+    }
+    public void codex()
+    {
+        boutonBack();
+
         Debug.Log("1814");
     }
     public void playGame()
     {
+        audioSource.PlayOneShot(boutonValide);
         SceneManager.LoadScene(2);
     }
     private void Update()
     {
+        bandeOriginale.volume = volumeBO;
+
         if (videoPlayer.isPlaying == false && videoIsactive == true )
         {
             lunchGame.SetActive(true);
@@ -116,12 +165,44 @@ public class Menu : MonoBehaviour
         {
             lunchGame.SetActive(false);
         }
+
+        if (volumeBO < maxVolumeBO)
+        {
+            StartCoroutine(fadeIn());
+        }
+        else
+        {
+            volumeBO = maxVolumeBO ;
+            return;
+        }
+      
         
+        
+    }
+    void boutonValid()
+    {
+        audioSource.PlayOneShot(boutonValide);
+        audioSource.volume = 0.3f;
+    }
+    void boutonBack()
+    {
+        audioSource.PlayOneShot(boutonRetour);
+        audioSource.volume = 0.3f;
+    }
+    void Tourne()
+    {
+        audioSource.PlayOneShot(pageQuiTourne);
+        
+        audioSource.volume = 0.3f;
+    }
 
 
+    IEnumerator fadeIn()
+    {
+        
+            yield return new WaitForSeconds(1f);
+            volumeBO += 0.01f;
     }
     
-    
-    
-    
+
 }

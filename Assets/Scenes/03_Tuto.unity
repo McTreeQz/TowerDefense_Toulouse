@@ -8705,7 +8705,7 @@ RectTransform:
   - {fileID: 1336067930}
   - {fileID: 215839074}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12164,7 +12164,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!1 &1287796316
 GameObject:
@@ -12424,7 +12424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1336067930
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12754,7 +12754,7 @@ Transform:
   - {fileID: 547664785}
   - {fileID: 705507995}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360061617
 GameObject:
@@ -14203,7 +14203,7 @@ Transform:
   - {fileID: 1555181259}
   - {fileID: 2033294406}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530767151
 GameObject:
@@ -14721,6 +14721,7 @@ GameObject:
   - component: {fileID: 1572476654}
   - component: {fileID: 1572476656}
   - component: {fileID: 1572476655}
+  - component: {fileID: 1572476658}
   m_Layer: 5
   m_Name: UI_Shop
   m_TagString: Untagged
@@ -14786,7 +14787,7 @@ MonoBehaviour:
     prefab: {fileID: 1233677476967571389, guid: 4d5092786dd20454b83d949add84e228,
       type: 3}
     cost: 3
-  towerSelection: {fileID: 0}
+  towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
 --- !u!114 &1572476655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14836,6 +14837,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572476652}
   m_CullTransparentMesh: 1
+--- !u!82 &1572476658
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572476652}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1573132088
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,7 +14990,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1573132091
 MonoBehaviour:
@@ -14994,17 +15091,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c70ca0ca3a3274a94dfdbcdf77e624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTowerPrefab: {fileID: 7789789470865395254, guid: 7772e650662e8c0499b3dd33d6365732,
-    type: 3}
-  arbaleteTowerPrefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
-    type: 3}
-  bricoleTowerPrefab: {fileID: 7789789470865395254, guid: aa82fa7f4b8d3da4f80a9168ad6238fc,
-    type: 3}
   ConstructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}
   ConstructionSpeed: 1
-  initBuild: {x: 0, y: 0, z: 0}
 --- !u!114 &1573132093
 MonoBehaviour:
   m_ObjectHideFlags: 0

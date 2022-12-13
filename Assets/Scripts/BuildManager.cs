@@ -18,9 +18,7 @@ public class BuildManager : MonoBehaviour
     }
     #endregion
 
-    public GameObject standardTowerPrefab;
-    public GameObject arbaleteTowerPrefab;
-    public GameObject bricoleTowerPrefab;
+    
     public GameObject ConstructionEffect;
 
     public AudioClip soundBuild = null;
@@ -28,13 +26,19 @@ public class BuildManager : MonoBehaviour
 
     public float ConstructionSpeed = 1;
 
-    private GameObject tower;
+    
     private TowerCosts TourToBuild;
    
-    public Vector3 initBuild;
+    
     
     
     public bool canBuild { get { return TourToBuild != null; } }
+
+    public void SetTourToBuild(TowerCosts tower)
+    {
+        TourToBuild = tower;
+    }
+
 
     private void Start()
     {
@@ -43,23 +47,19 @@ public class BuildManager : MonoBehaviour
     public void buildTowerOn(node node)
     {
         
-        initBuild = node.transform.position;
-        initBuild = new Vector3(initBuild.x, initBuild.y-5, initBuild.z);
+        
 
         if (PlayerStats.money >= TourToBuild.cost)
         {
             PlayerStats.money -= TourToBuild.cost;
-            tower = Instantiate(TourToBuild.prefab, initBuild, Quaternion.identity);
+            GameObject tower = (GameObject)Instantiate(TourToBuild.prefab, node.getBuildPosition(), Quaternion.identity);
             audiosource.PlayOneShot(soundBuild);
 
             GameObject effectIns = (GameObject)Instantiate(ConstructionEffect, node.transform.position, node.transform.rotation);
             Destroy(effectIns, 2f);
             node.turret = tower;
         }
-        else
-        {
-            return;
-        }
+        
         
     }
     private void Update()
@@ -67,10 +67,6 @@ public class BuildManager : MonoBehaviour
         
     }
 
-    public void SetTourToBuild(TowerCosts tower)
-    {
-        TourToBuild = tower;
-    }
-
+    
     
 }

@@ -5188,7 +5188,7 @@ Transform:
   - {fileID: 6792968338708917732}
   - {fileID: 1016337904773492803}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532837721
 GameObject:
@@ -6251,7 +6251,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &631264165
 BoxCollider:
@@ -7755,29 +7755,6 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   turret: {fileID: 0}
---- !u!1 &826574834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 839279605429070942, guid: 379783a3b7442344d8a633857291beb9,
-    type: 3}
-  m_PrefabInstance: {fileID: 839279604636117932}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &826574840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826574834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d5ff8b10b382145a19db1b54c364fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
-    type: 3}
-  hoverColor: {r: 1, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
-  turret: {fileID: 0}
 --- !u!1 &827047345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8357,7 +8334,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &893123355
 BoxCollider:
@@ -10117,6 +10094,7 @@ GameObject:
   - component: {fileID: 995767616}
   - component: {fileID: 995767618}
   - component: {fileID: 995767617}
+  - component: {fileID: 995767620}
   m_Layer: 5
   m_Name: UI_Shop
   m_TagString: Untagged
@@ -10182,7 +10160,7 @@ MonoBehaviour:
     prefab: {fileID: 1233677476967571389, guid: 4d5092786dd20454b83d949add84e228,
       type: 3}
     cost: 3
-  towerSelection: {fileID: 0}
+  towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
 --- !u!114 &995767617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10232,6 +10210,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995767614}
   m_CullTransparentMesh: 1
+--- !u!82 &995767620
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995767614}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1017856547
 GameObject:
   m_ObjectHideFlags: 0
@@ -12744,7 +12818,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!1001 &1271675876
 PrefabInstance:
@@ -13140,29 +13214,6 @@ Transform:
   m_Father: {fileID: 1492753127}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1340080838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 839279605523212650, guid: 379783a3b7442344d8a633857291beb9,
-    type: 3}
-  m_PrefabInstance: {fileID: 839279604636117932}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1340080843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340080838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d5ff8b10b382145a19db1b54c364fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
-    type: 3}
-  hoverColor: {r: 1, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
-  turret: {fileID: 0}
 --- !u!1001 &1341908296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14131,7 +14182,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &1437329670
 BoxCollider:
@@ -14702,7 +14753,7 @@ Transform:
   - {fileID: 1555181259}
   - {fileID: 2033294406}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530767151
 GameObject:
@@ -15217,7 +15268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1573132091
 MonoBehaviour:
@@ -15318,17 +15369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c70ca0ca3a3274a94dfdbcdf77e624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTowerPrefab: {fileID: 7789789470865395254, guid: 7772e650662e8c0499b3dd33d6365732,
-    type: 3}
-  arbaleteTowerPrefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
-    type: 3}
-  bricoleTowerPrefab: {fileID: 7789789470865395254, guid: aa82fa7f4b8d3da4f80a9168ad6238fc,
-    type: 3}
   ConstructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}
   ConstructionSpeed: 1
-  initBuild: {x: 0, y: 0, z: 0}
 --- !u!114 &1573132093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17618,7 +17662,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &1823717352
 BoxCollider:
@@ -18307,7 +18351,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &1891453554
 BoxCollider:
@@ -18538,7 +18582,7 @@ MonoBehaviour:
   constructionEffect: {fileID: 6298211303131569541, guid: 9aab147df30885849a928358582753d0,
     type: 3}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  positionOffset: {x: 0, y: 0, z: 0}
+  positionOffset: {x: 0, y: -5, z: 0}
   turret: {fileID: 0}
 --- !u!65 &1910542874
 BoxCollider:
@@ -20907,96 +20951,6 @@ Transform:
   m_Father: {fileID: 98430193}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &839279604636117932
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 839279604610548952, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_Name
-      value: TurretSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279604610548953, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279605429070939, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279605429070939, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 54.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279605523212651, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -39.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 839279605523212651, guid: 379783a3b7442344d8a633857291beb9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 58.96
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 839279604610548954, guid: 379783a3b7442344d8a633857291beb9, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 379783a3b7442344d8a633857291beb9, type: 3}
 --- !u!1001 &1016337904773492802
 PrefabInstance:
   m_ObjectHideFlags: 0

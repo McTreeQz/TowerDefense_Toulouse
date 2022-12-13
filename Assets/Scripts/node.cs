@@ -7,6 +7,8 @@ public class node : MonoBehaviour
     public GameObject constructionEffect;
     public Color hoverColor;
     public Vector3 positionOffset;
+
+    [HideInInspector]
     public GameObject turret;
 
     private Color startColor;
@@ -21,23 +23,29 @@ public class node : MonoBehaviour
 
         buildManager = BuildManager.instance;
     }
-
+    public Vector3 getBuildPosition()
+    {
+        return transform.position + positionOffset;
+    }
+    
     private void OnMouseDown()
     {
-        if(!buildManager.canBuild)
-        {
-            return;
-        }
+        
 
         if (turret != null)
         {
             Debug.Log("Impossible de construire ici, il y a déjà une tourelle.");
             return;
         }
-        //if (PlayerStats.money ) 
-        // {
+
+        if (!buildManager.canBuild)
+        {
+            return;
+        }
+
+        
         buildManager.buildTowerOn(this);
-        //}
+        
     }
 
     private void OnMouseEnter()
