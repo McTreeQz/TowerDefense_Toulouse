@@ -20,6 +20,7 @@ public class Menu : MonoBehaviour
     public GameObject fondLivreBataille;
     public GameObject videoIntro;
     public GameObject lunchGame;
+    public GameObject camera;
 
     [Space]
     [Header("Audio")]
@@ -77,6 +78,15 @@ public class Menu : MonoBehaviour
             if (animator != null)
             {
                 
+                animator.SetTrigger(trigger);
+            }
+        }
+        if (camera != null)
+        {
+            var animator = camera.GetComponent<Animator>();
+            if (animator != null)
+            {
+
                 animator.SetTrigger(trigger);
             }
         }
