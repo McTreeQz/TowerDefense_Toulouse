@@ -38,7 +38,9 @@ public class IANavSoldier : MonoBehaviour{
     private AudioSource      audioSource;
     private GameObject[]     Ennemy;
     private NavMeshAgent     agent;
-    private bool isPlaying = false;
+
+    private bool enemyDeathPlaying = false;
+    private bool fightPlaying = false;
 
 
     public  float           health;
@@ -121,6 +123,15 @@ public class IANavSoldier : MonoBehaviour{
                     target.GetComponent<IANavSoldier>().health -= degat;
                     
                     fireCountDown = 1 / fireRate;
+                    if(gameObject.CompareTag ("Allies") && fightPlaying == false)
+                    {
+                        fightPlaying = true;
+                        StartCoroutine(fight());
+                        if (audioSource.isPlaying == false)
+                        {
+                            fightPlaying = false;
+                        }
+                    }
                 }
                 
             }
@@ -178,20 +189,20 @@ public class IANavSoldier : MonoBehaviour{
             }
         }
 
-        if (health <= 0 && gameObject.CompareTag("Ennemie") && isPlaying == false)
+        if (health <= 0 && gameObject.CompareTag("Ennemie") && enemyDeathPlaying == false)
         {
 
-            isPlaying = true;
+            enemyDeathPlaying = true;
             PlayerStats.money += GoldReward;
             StartCoroutine(death());
             WaveSpawner._enemyAlives--;
             
         }
 
-        else if (health <= 0 )
+        else if(health <= 0 && gameObject.CompareTag("Allies"))
         {
-            
-            
+            Destroy(gameObject);
+
         }
     }
 
@@ -203,6 +214,14 @@ public class IANavSoldier : MonoBehaviour{
         audioSource.PlayOneShot(GainMoney);
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
+    }
+
+    IEnumerator fight()
+    {
+        //agent.destination = agent.transform.position;
+        audioSource.PlayOneShot(Combat);
+        yield return new WaitForSeconds(4.8f);
+        
     }
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //            FONCTIONS DE DEBUG            //

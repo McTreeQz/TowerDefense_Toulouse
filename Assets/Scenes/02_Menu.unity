@@ -1552,12 +1552,12 @@ MonoBehaviour:
   fondLivreBataille: {fileID: 1418343636}
   videoIntro: {fileID: 803657276}
   lunchGame: {fileID: 171895363}
-  camera: {fileID: 1802306560}
+  cameraMenu: {fileID: 1802306560}
   pageQuiTourne: {fileID: 8300000, guid: 9279eebfe8aedd649a31f7218bb1f35e, type: 3}
   boutonValide: {fileID: 8300000, guid: 33c126ec7dbf7d64781d2ed14e45313a, type: 3}
   boutonRetour: {fileID: 8300000, guid: 1376bf312c57ce843bcdc4bc5fe12aa4, type: 3}
   boutonPlay: {fileID: 8300000, guid: 05173116912e2314083326e8aa8ebc3a, type: 3}
-  cinematique: {fileID: 0}
+  cinematique: {fileID: 8300000, guid: dbebf8d655541d44c892e391b3fc4d50, type: 3}
   BO: {fileID: 8300000, guid: 3b1b4163d4ed23d418d2878e85123fd7, type: 3}
   bandeOriginale: {fileID: 910807519}
 --- !u!328 &910807517
@@ -1607,7 +1607,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.502
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -4,9 +4,10 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour
 {
     public Image Soldier_TimerSpawner;
-
     public Image craftMan_TimeSpawner;
-    
+    public GameObject prefab_artisan;
+    public GameObject prefab_soldat;
+
 
     private float initSoldierTimer = 10;
     private float SoldierTimer;
@@ -17,29 +18,29 @@ public class timer : MonoBehaviour
      
 
 
-    void Awake() 
+    void Start() 
     {
 
-        //initiCraftTimer = GetComponent<AlliesSpawner>().timerCraftsman;
+        initiCraftTimer = prefab_artisan.GetComponent<AlliesSpawner>().timerCraftsman;
 
-        //initSoldierTimer = GetComponent<AlliesSpawner>().timerSoldier;
+        initSoldierTimer = prefab_soldat.GetComponent<AlliesSpawner>().timerSoldier;
 
     }
 
     // Update is called once per frame
     private void Update()
     {
-        /*Debug.Log(initSoldierTimer);
+        Debug.Log(initSoldierTimer);
         Debug.Log("coucou");
-        carftTimer = GetComponent<AlliesSpawner>().timerCraftsman;
+        carftTimer = initiCraftTimer ;
 
-        SoldierTimer = GetComponent<AlliesSpawner>().timerSoldier;
+        SoldierTimer = prefab_soldat.GetComponent<AlliesSpawner>().timerSoldier;
         //Debug.Log(health);
 
 
 
 
-        /*if (SoldierTimer == initSoldierTimer)
+        if (SoldierTimer == initSoldierTimer)
         {
             Soldier_TimerSpawner.enabled = false;
         }
@@ -50,7 +51,7 @@ public class timer : MonoBehaviour
 
 
         craftMan_TimeSpawner.fillAmount = carftTimer / initiCraftTimer;
-        Soldier_TimerSpawner.fillAmount = SoldierTimer / initSoldierTimer;*/
+        Soldier_TimerSpawner.fillAmount = SoldierTimer / initSoldierTimer;
 
         // me permet d'avoir un chiffre entre 0 et 1 peut importe le chiffre de base.
     }

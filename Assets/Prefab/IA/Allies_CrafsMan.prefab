@@ -143,12 +143,16 @@ MonoBehaviour:
   NameTarget: Tower
   health: 0
   Range: 10
-  InitHealth: 10
+  InitHealth: 3
   care: 1
   degat: 0
-  fireRate: 1
+  fireRate: 0
   fireCountDown: 0
-  GoldReward: 25
+  GoldReward: 0
+  Combat: {fileID: 0}
+  EnnemyDeath: {fileID: 0}
+  AlliesDeath: {fileID: 0}
+  GainMoney: {fileID: 0}
 --- !u!1 &6065350363060689130
 GameObject:
   m_ObjectHideFlags: 0

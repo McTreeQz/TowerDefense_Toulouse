@@ -259,8 +259,8 @@ MonoBehaviour:
   degat: 1
   fireRate: 1
   fireCountDown: 0
-  GoldReward: 25
-  Combat: {fileID: 8300000, guid: 9a3fc906512ee9e4f89844fdb87d20a1, type: 3}
+  GoldReward: 45
+  Combat: {fileID: 0}
   EnnemyDeath: {fileID: 8300000, guid: c9e4c23897202444ea5dd5f6eea2848d, type: 3}
   AlliesDeath: {fileID: 8300000, guid: ad70e33355ab7ce479ab121223bb826b, type: 3}
   GainMoney: {fileID: 8300000, guid: 56bd0fd02403ba74fb8387589f040230, type: 3}
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a64889ad5a227d41b7a7050c700fcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorpion: {fileID: 0}
   ArrowPrefab: {fileID: 5629590701581248377, guid: 053f17dfe92788540970e61b48156b0a,
     type: 3}
   tagTarget: Tower

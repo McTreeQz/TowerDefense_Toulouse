@@ -226,7 +226,7 @@ MonoBehaviour:
   degat: 1
   fireRate: 1
   fireCountDown: 0
-  GoldReward: 25
+  GoldReward: 40
   Combat: {fileID: 0}
   EnnemyDeath: {fileID: 8300000, guid: c9e4c23897202444ea5dd5f6eea2848d, type: 3}
   AlliesDeath: {fileID: 0}

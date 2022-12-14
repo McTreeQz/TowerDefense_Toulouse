@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
     public GameObject fondLivreBataille;
     public GameObject videoIntro;
     public GameObject lunchGame;
-    public GameObject camera;
+    public GameObject cameraMenu;
 
     [Space]
     [Header("Audio")]
@@ -81,9 +81,9 @@ public class Menu : MonoBehaviour
                 animator.SetTrigger(trigger);
             }
         }
-        if (camera != null)
+        if (cameraMenu != null)
         {
-            var animator = camera.GetComponent<Animator>();
+            var animator = cameraMenu.GetComponent<Animator>();
             if (animator != null)
             {
 
@@ -128,6 +128,7 @@ public class Menu : MonoBehaviour
         Tourne();
         videoIntro.SetActive(true);
         videoIsactive = true;
+        audioSource.PlayOneShot(cinematique);
 
 
     }
