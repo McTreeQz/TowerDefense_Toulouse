@@ -12687,10 +12687,8 @@ MonoBehaviour:
   dialogue: {fileID: 1185692530}
   textComponent: {fileID: 28126861}
   lines:
-  - "Nos \xE9claireurs nous ont pr\xE9venu d\u2019une attaque imminente des sarrasins.
-    Hi my Lord, an enemy attack is coming"
-  - "On doit pr\xE9parer les d\xE9fenses et ralentir l\u2019ennemi le plus longtemps
-    possible en attendant les renforts ."
+  - 'Hi my Lord, an Umayyad attack is coming. '
+  - "Selects an archer\u2019s tower and poses there at the intended location."
   textSpeed: 3
   isActive: 0
 --- !u!1 &1209129168
@@ -16746,7 +16744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 120
+  startMoney: 900
   start_healthPlayer: 5
 --- !u!82 &1573132095
 AudioSource:
