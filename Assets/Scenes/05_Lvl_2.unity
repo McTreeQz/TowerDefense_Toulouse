@@ -3372,8 +3372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 615.7479, y: -912.9708}
-  m_SizeDelta: {x: 160, y: 70.7}
+  m_AnchoredPosition: {x: 592, y: -912.9708}
+  m_SizeDelta: {x: 243.34, y: 70.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337404058
 MonoBehaviour:
@@ -5519,8 +5519,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12540,7 +12540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip Time
+  m_text: End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfe83cffa641dbc4b8919fcb2c0b5bd8, type: 2}
   m_sharedMaterial: {fileID: -9147660025718589124, guid: bfe83cffa641dbc4b8919fcb2c0b5bd8,
@@ -12568,8 +12568,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 95
+  m_fontSizeBase: 95
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16093,6 +16093,24 @@ MonoBehaviour:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     timerBetweenEnemy: 1
+  - enemy:
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
+    timerBetweenEnemy: 2
+  - enemy:
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    timerBetweenEnemy: 1
   spawnPoint: {fileID: 948229124}
   timeBetweenWaves: 10
   waveCountDown: {fileID: 683520836}
@@ -18713,9 +18731,9 @@ MonoBehaviour:
   dialogue: {fileID: 231120740}
   textComponent: {fileID: 1890408405}
   lines:
-  - "Nos \xE9claireurs nous ont pr\xE9venu d\u2019une attaque imminente des sarrasins. "
-  - "On doit pr\xE9parer les d\xE9fenses et ralentir l\u2019ennemi le plus longtemps
-    possible en attendant les renforts ."
+  - Eudes send us soldiers and craftsman. Now we can repair our tower. Our soldiers
+    are experienced warriors.
+  - We must hold on to give the duke time to prepare.
   textSpeed: 3
   isActive: 0
 --- !u!95 &1863783890
@@ -18988,8 +19006,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -20039,7 +20057,7 @@ MonoBehaviour:
   dialogue: {fileID: 1785637240}
   textComponent: {fileID: 716962610}
   lines:
-  - "Je crois qu'on a r\xE9ussi \xE0 les repousser pour le moment..."
+  - ' The enemies are retreating, Eudes had to succeed his attack'
   textSpeed: 3
 --- !u!95 &1957685308
 Animator:

@@ -1049,8 +1049,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 534.015, y: -975}
-  m_SizeDelta: {x: 160, y: 70.7}
+  m_AnchoredPosition: {x: 506, y: -951}
+  m_SizeDelta: {x: 260.2, y: 95.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114204485
 MonoBehaviour:
@@ -1862,8 +1862,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2224,7 +2224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &255611034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2498,8 +2498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 615.7479, y: -912.9708}
-  m_SizeDelta: {x: 160, y: 70.7}
+  m_AnchoredPosition: {x: 578, y: -905}
+  m_SizeDelta: {x: 220.83, y: 85.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261613911
 MonoBehaviour:
@@ -4095,8 +4095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5475,7 +5475,7 @@ Transform:
   - {fileID: 6792968338708917732}
   - {fileID: 1016337904773492803}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532837721
 GameObject:
@@ -8921,9 +8921,9 @@ MonoBehaviour:
   dialogue: {fileID: 1957645029}
   textComponent: {fileID: 418652546}
   lines:
-  - "Nos \xE9claireurs nous ont pr\xE9venu d\u2019une attaque imminente des sarrasins. "
-  - "On doit pr\xE9parer les d\xE9fenses et ralentir l\u2019ennemi le plus longtemps
-    possible en attendant les renforts ."
+  - Ho noo he was not a spotter, the first wave is coming.
+  - Be careful, our spotter is warning us. The enemy has soldiers and archers, archers
+    can destroy our tower.
   textSpeed: 3
   isActive: 0
 --- !u!95 &904587113
@@ -10362,8 +10362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10517,7 +10517,6 @@ GameObject:
   - component: {fileID: 995767619}
   - component: {fileID: 995767616}
   - component: {fileID: 995767618}
-  - component: {fileID: 995767617}
   - component: {fileID: 995767620}
   m_Layer: 5
   m_Name: UI_Shop
@@ -10585,22 +10584,6 @@ MonoBehaviour:
       type: 3}
     cost: 3
   towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
---- !u!114 &995767617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995767614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e388f89ecc79f5d46810fa7dd2ddf8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Soldier_TimerSpawner: {fileID: 532837723}
-  craftMan_TimeSpawner: {fileID: 921873796}
-  prefab_artisan: {fileID: 0}
-  prefab_soldat: {fileID: 0}
 --- !u!114 &995767618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13144,8 +13127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 95
+  m_fontSizeBase: 95
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14361,7 +14344,8 @@ MonoBehaviour:
   dialogue: {fileID: 361170574}
   textComponent: {fileID: 221921984}
   lines:
-  - "Je crois qu'on a r\xE9ussi \xE0 les repousser pour le moment..."
+  - "I think we\u2019ve managed to push them back for now..."
+  - 'Eudes should be back with reinforcements soon. '
   textSpeed: 3
 --- !u!95 &1375925480
 Animator:
@@ -15428,7 +15412,7 @@ Transform:
   - {fileID: 1555181259}
   - {fileID: 2033294406}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530767151
 GameObject:
@@ -15953,7 +15937,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1573132091
 MonoBehaviour:
@@ -16626,6 +16610,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627891364}
   m_CullTransparentMesh: 1
+--- !u!1 &1632187399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632187401}
+  - component: {fileID: 1632187400}
+  m_Layer: 0
+  m_Name: Ambiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1632187400
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632187399}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3b1b4163d4ed23d418d2878e85123fd7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.01
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1632187401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632187399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638069631
 GameObject:
   m_ObjectHideFlags: 0
@@ -17077,7 +17189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1687107764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18928,7 +19040,7 @@ PrefabInstance:
     - target: {fileID: 3855130354009426069, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3855130354009426069, guid: 03adc0aa5ca913446a8f0705d243ceb8,
         type: 3}
