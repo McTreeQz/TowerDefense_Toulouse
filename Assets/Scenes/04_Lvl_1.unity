@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028462, g: 0.2257157, b: 0.30692294, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028463, g: 0.2257157, b: 0.30692297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10575,14 +10575,6 @@ MonoBehaviour:
     prefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
       type: 3}
     cost: 150
-  Soldier:
-    prefab: {fileID: 1233677476967571389, guid: 307a094fe5612e049a4a42e264881705,
-      type: 3}
-    cost: 3
-  CraftsMan:
-    prefab: {fileID: 1233677476967571389, guid: 4d5092786dd20454b83d949add84e228,
-      type: 3}
-    cost: 3
   towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
 --- !u!114 &995767618
 MonoBehaviour:
@@ -16080,7 +16072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 75
+  startMoney: 800
   start_healthPlayer: 5
 --- !u!82 &1573132095
 AudioSource:

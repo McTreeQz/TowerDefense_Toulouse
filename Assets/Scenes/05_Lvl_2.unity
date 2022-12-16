@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028462, g: 0.2257157, b: 0.30692294, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028463, g: 0.2257157, b: 0.30692297, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10497,14 +10497,6 @@ MonoBehaviour:
     prefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
       type: 3}
     cost: 150
-  Soldier:
-    prefab: {fileID: 1233677476967571389, guid: 307a094fe5612e049a4a42e264881705,
-      type: 3}
-    cost: 3
-  CraftsMan:
-    prefab: {fileID: 1233677476967571389, guid: 4d5092786dd20454b83d949add84e228,
-      type: 3}
-    cost: 3
   towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
 --- !u!114 &1002498738
 MonoBehaviour:
@@ -16087,7 +16079,8 @@ MonoBehaviour:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
-    timerBetweenEnemy: 2
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    timerBetweenEnemy: 0.5
   - enemy:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
@@ -18734,7 +18727,7 @@ MonoBehaviour:
   - Eudes send us soldiers and craftsman. Now we can repair our tower. Our soldiers
     are experienced warriors.
   - We must hold on to give the duke time to prepare.
-  textSpeed: 3
+  textSpeed: 15
   isActive: 0
 --- !u!95 &1863783890
 Animator:

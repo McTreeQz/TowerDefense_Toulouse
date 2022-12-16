@@ -5,8 +5,7 @@ public class Shop : MonoBehaviour
     public TowerCosts ArrowTower;
     public TowerCosts BricoleTower;
     public TowerCosts CrossbowTower;
-    public TowerCosts Soldier;
-    public TowerCosts CraftsMan;
+   
 
     [Space]
     public AudioClip towerSelection;

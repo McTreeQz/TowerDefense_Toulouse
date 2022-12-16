@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7783309196991742186}
   - component: {fileID: 4022063655081006729}
   - component: {fileID: 5989291481020340295}
+  - component: {fileID: 6185963638051608175}
   - component: {fileID: 4661527068828455230}
   m_Layer: 0
   m_Name: CrossbowTower
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a64889ad5a227d41b7a7050c700fcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorpion: {fileID: 974154217777017717}
+  target: {fileID: 0}
   ArrowPrefab: {fileID: 5629590701581248377, guid: 1b6ff43e1d7f3214bac8c3d2c909fab0,
     type: 3}
   tagTarget: Ennemie
@@ -154,6 +155,19 @@ MonoBehaviour:
   soundFire: {fileID: 8300000, guid: efcfe1558de3d1845acd6e755a682e53, type: 3}
   soundDeath: {fileID: 8300000, guid: 1ba23710a5362864f91bd41624b3d917, type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}
+--- !u!114 &6185963638051608175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023952913298962000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8181c922d8f04124cb0c769c3804298e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorpion: {fileID: 974154217777017717}
 --- !u!82 &4661527068828455230
 AudioSource:
   m_ObjectHideFlags: 0

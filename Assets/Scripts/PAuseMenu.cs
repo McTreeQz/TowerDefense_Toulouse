@@ -4,20 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 
+/// MenuPause
+/// 
+/// 
+/// 
+/// </summary>
+
+
+//L'objectif de ce script est de gérer le menu Pause.
+//
+//
+//
+//
+
 public class PAuseMenu : MonoBehaviour
 {
     private bool isActive = false;
     public GameObject pauseMenu;
+    private int sceneActuel;
 
     // Start is called before the first frame update
     void Start()
     {
+        sceneActuel = SceneManager.GetActiveScene().buildIndex;
         pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        Debug.Log(Time.timeScale);
         if (isActive == true)
         {
             Time.timeScale = 0f;
@@ -29,7 +48,9 @@ public class PAuseMenu : MonoBehaviour
     }
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isActive = false;
+        SceneManager.LoadScene(sceneActuel);
+
     }
     public void pauseMenuOn()
     {

@@ -35,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
     {
         
         begin = intro.GetComponent<IntroManager>().isActive;
-        Debug.Log(_enemyAlives);
+        //Debug.Log(_enemyAlives);
         if (begin == true)
         {
             if (_enemyAlives > 0)

@@ -42,13 +42,16 @@ public class AlliesSpawner : MonoBehaviour
     {
         sceneActuel = SceneManager.GetActiveScene().buildIndex;
         audioSource = GetComponent<AudioSource>();
-        Soldier_TimerSpawner.enabled = false;
-        craftMan_TimeSpawner.enabled = false;
 
-        initTimerSoldier = timerSoldier;
+        if (sceneActuel >= 4)
+        {
+            Soldier_TimerSpawner.enabled = false;
+            craftMan_TimeSpawner.enabled = false;
 
-        initTimerCraftMan = timerCraftsman;
+            initTimerSoldier = timerSoldier;
 
+            initTimerCraftMan = timerCraftsman;
+        }
 
 
     }
