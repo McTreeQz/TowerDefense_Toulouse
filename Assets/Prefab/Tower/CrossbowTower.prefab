@@ -146,12 +146,13 @@ MonoBehaviour:
   ArrowPrefab: {fileID: 5629590701581248377, guid: 1b6ff43e1d7f3214bac8c3d2c909fab0,
     type: 3}
   tagTarget: Ennemie
+  tagTarget2: 
   FirePoint: {fileID: 2457367778651689109}
   range: 15
   fireRate: 1
   fireCountDown: 0
-  health: 3
-  speedConstruct: 2
+  health: 5
+  speedConstruct: 1
   soundFire: {fileID: 8300000, guid: efcfe1558de3d1845acd6e755a682e53, type: 3}
   soundDeath: {fileID: 8300000, guid: 1ba23710a5362864f91bd41624b3d917, type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}
@@ -454,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827032207842398053}
   m_LocalRotation: {x: -0, y: -0.7071065, z: -0, w: 0.7071071}
-  m_LocalPosition: {x: -0.98, y: 1.5229998, z: 1.56}
+  m_LocalPosition: {x: -0.029978156, y: 1.4031601, z: 1.9700402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

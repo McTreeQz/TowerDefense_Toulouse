@@ -25,6 +25,8 @@ public class PAuseMenu : MonoBehaviour
     public GameObject pauseMenu;
     private int sceneActuel;
 
+    public GameObject GameManager; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class PAuseMenu : MonoBehaviour
     void Update()
     {
         
-        Debug.Log(Time.timeScale);
+        
         if (isActive == true)
         {
             Time.timeScale = 0f;
@@ -48,12 +50,15 @@ public class PAuseMenu : MonoBehaviour
     }
     public void RestartScene()
     {
-        isActive = false;
+        Time.timeScale = 1f;
+        WaveSpawner._enemyAlives = 0;
         SceneManager.LoadScene(sceneActuel);
+
 
     }
     public void pauseMenuOn()
     {
+        
         pauseMenu.SetActive(true);
         isActive = true;
     }

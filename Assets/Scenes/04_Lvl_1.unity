@@ -8510,6 +8510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1458944122}
+  GameManager: {fileID: 1573132088}
 --- !u!222 &869352652
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8924,7 +8925,7 @@ MonoBehaviour:
   - Ho noo he was not a spotter, the first wave is coming.
   - Be careful, our spotter is warning us. The enemy has soldiers and archers, archers
     can destroy our tower.
-  textSpeed: 3
+  textSpeed: 15
   isActive: 0
 --- !u!95 &904587113
 Animator:
@@ -14338,7 +14339,7 @@ MonoBehaviour:
   lines:
   - "I think we\u2019ve managed to push them back for now..."
   - 'Eudes should be back with reinforcements soon. '
-  textSpeed: 3
+  textSpeed: 15
 --- !u!95 &1375925480
 Animator:
   serializedVersion: 4
@@ -15912,6 +15913,18 @@ MonoBehaviour:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     timerBetweenEnemy: 1
+  - enemy:
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
+    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
+    timerBetweenEnemy: 1
   spawnPoint: {fileID: 948229124}
   timeBetweenWaves: 10
   waveCountDown: {fileID: 128281646}
@@ -16072,7 +16085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 800
+  startMoney: 95
   start_healthPlayer: 5
 --- !u!82 &1573132095
 AudioSource:

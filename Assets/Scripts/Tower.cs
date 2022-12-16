@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-//[RequireComponent(typeof(NavMeshObstacle))]
+
 
 public class Tower : MonoBehaviour
 {
@@ -13,9 +15,12 @@ public class Tower : MonoBehaviour
     private bool isplaying = false;
     private Transform towertargetPos;
     private GameObject[] Ennemy;
+    private GameObject[] tower;
+    private GameObject[] soldier;
+
     private Vector3 test;
 
-    //BuildManager build;
+
 
 
     [Space]
@@ -23,6 +28,7 @@ public class Tower : MonoBehaviour
     //public  Transform       scorpion;
     public  GameObject      ArrowPrefab;
     public  string          tagTarget;
+    public  string          tagTarget2;
     public  Transform       FirePoint;
 
     [Space]
@@ -63,7 +69,20 @@ public class Tower : MonoBehaviour
             transform.Translate(dir.normalized * (speedConstruct * Time.deltaTime), Space.World);
         }
 
-        Ennemy = GameObject.FindGameObjectsWithTag(tagTarget);
+        if (gameObject.CompareTag("Ennemie")) // pour les archer ennemis merge les list entre elles
+        {
+            soldier = GameObject.FindGameObjectsWithTag(tagTarget2);
+            tower = GameObject.FindGameObjectsWithTag(tagTarget);
+            Ennemy = soldier.Concat(tower).ToArray();
+        }
+        if (gameObject.CompareTag("Tower")) // pour les tower allies
+        {
+            
+            tower = GameObject.FindGameObjectsWithTag(tagTarget);
+            Ennemy = tower;
+        }
+
+
         float shortestDistance = Mathf.Infinity;
         GameObject Enemy = null;
 
@@ -97,17 +116,6 @@ public class Tower : MonoBehaviour
 
             StartCoroutine(death());
         }
-        
-    }
-    private void Update()
-    {
-       /* if (target != null )
-        {
-            Vector3 dir = target.position - transform.position;
-            Quaternion lookdirection = Quaternion.LookRotation(dir);
-            Vector3 rotation = lookdirection.eulerAngles;
-            scorpion.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-        }*/
         
     }
 

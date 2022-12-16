@@ -57,7 +57,7 @@ public class Arrow : MonoBehaviour
             
 
         }
-        else if (target.tag == "Ennemie")
+        else if (target.tag == "Ennemie" || target.tag == "Allies")
         {
 
             target.GetComponent<IANavSoldier>().health -= degat;

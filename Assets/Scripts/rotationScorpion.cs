@@ -8,8 +8,8 @@ public class rotationScorpion : MonoBehaviour
     public Transform scorpion;
     private Transform target;
 
-    //Tower tower;
-    // Start is called before the first frame update
+    
+    // Le script permet la rotation du scorpion sur le prefab "crossbow"
     
 
     // Update is called once per frame

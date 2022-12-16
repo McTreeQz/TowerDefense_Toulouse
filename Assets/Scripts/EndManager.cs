@@ -21,6 +21,8 @@ public class EndManager : MonoBehaviour
     public float textSpeed;
 
     private int index;
+
+    Coroutine LineReadingCoro = null;
     private void Awake()
     {
         EndDialogue.SetActive(false);
@@ -44,26 +46,42 @@ public class EndManager : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        StartCoroutine(TypeLine());
+        LineReadingCoro = StartCoroutine(TypeLine());
     }
     IEnumerator TypeLine()
     {
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed * Time.deltaTime);
+            yield return new WaitForSeconds(1/textSpeed );
         }
+        LineReadingCoro = null;
     }
+
+    private void FinishSentence()
+    {
+
+        textComponent.text = lines[index].ToString();
+
+
+    }
+
     public void nextLine()
     {
         //Debug.Log("next");
-
+        if (LineReadingCoro != null)
+        {
+            StopCoroutine(LineReadingCoro);
+            LineReadingCoro = null;
+            FinishSentence();
+            return;
+        }
 
         if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
+            LineReadingCoro = StartCoroutine(TypeLine());
 
         }
         else

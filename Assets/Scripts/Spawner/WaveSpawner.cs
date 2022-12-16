@@ -33,7 +33,7 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(begin);
         begin = intro.GetComponent<IntroManager>().isActive;
         //Debug.Log(_enemyAlives);
         if (begin == true)
@@ -44,6 +44,7 @@ public class WaveSpawner : MonoBehaviour
             }
             if (countdown <= 0f)
             {
+                
                 StartCoroutine(spawnWave());
 
                 countdown = timeBetweenWaves;
@@ -52,6 +53,7 @@ public class WaveSpawner : MonoBehaviour
             }
 
             countdown -= Time.deltaTime;
+            countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
             waveCountDown.text = Mathf.Floor(countdown).ToString();
 
             if (waveNumber >= waves.Length && _enemyAlives == 0)
@@ -68,7 +70,9 @@ public class WaveSpawner : MonoBehaviour
     }
     IEnumerator spawnWave()
     {
+        Debug.Log("coucou");
         WaveStats wave = waves[waveNumber];
+        waveNumber++;
 
         for (int i = 0; i < wave.enemy.Length; i++)
         {

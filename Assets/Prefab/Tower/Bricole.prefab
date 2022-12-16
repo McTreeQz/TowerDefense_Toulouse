@@ -448,15 +448,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a64889ad5a227d41b7a7050c700fcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   ArrowPrefab: {fileID: 5629590701581248377, guid: 079c52b0dceb86149a9904c7350df622,
     type: 3}
   tagTarget: Ennemie
+  tagTarget2: 
   FirePoint: {fileID: 1885171365400554789}
-  range: 15
-  fireRate: 1
+  range: 12
+  fireRate: 3
   fireCountDown: 0
   health: 3
-  speedConstruct: 2
+  speedConstruct: 3
   soundFire: {fileID: 8300000, guid: 5f0816dba0f143a4d8d781bb0ece4d18, type: 3}
   soundDeath: {fileID: 8300000, guid: 1ba23710a5362864f91bd41624b3d917, type: 3}
   soundBuild: {fileID: 8300000, guid: 10e5945b768cf6542a2bfa346f6a4e82, type: 3}
