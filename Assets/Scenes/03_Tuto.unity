@@ -12803,7 +12803,7 @@ MonoBehaviour:
   textComponent: {fileID: 28126861}
   lines:
   - 'Hi my Lord, an Umayyad attack is coming. '
-  - "Selects an archer\u2019s tower and poses there at the intended location."
+  - Select and place your archery tower on highlighted boxes.
   textSpeed: 15
   isActive: 0
 --- !u!1 &1209129168
