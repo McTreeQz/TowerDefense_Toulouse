@@ -163,7 +163,7 @@ MonoBehaviour:
   tagTarget2: 
   FirePoint: {fileID: 1885171365400554789}
   range: 12
-  fireRate: 2
+  fireRate: 1
   fireCountDown: 0
   health: 4
   speedConstruct: 2

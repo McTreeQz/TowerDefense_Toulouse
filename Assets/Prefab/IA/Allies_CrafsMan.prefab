@@ -146,7 +146,7 @@ MonoBehaviour:
   InitHealth: 3
   care: 1
   degat: 0
-  fireRate: 0
+  fireRate: 1
   fireCountDown: 0
   GoldReward: 0
   Combat: {fileID: 0}

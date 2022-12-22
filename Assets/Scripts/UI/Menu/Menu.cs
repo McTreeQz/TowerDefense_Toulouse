@@ -165,6 +165,12 @@ public class Menu : MonoBehaviour
 
         Debug.Log("1814");
     }
+    public void quit()
+    {
+        boutonBack();
+
+        Application.Quit();
+    }
     public void playGame()
     {
         audioSource.PlayOneShot(boutonValide);
