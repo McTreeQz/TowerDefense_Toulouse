@@ -10220,7 +10220,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 947043745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336067931}
+        m_TargetAssemblyTypeName: PAuseMenu, Assembly-CSharp
+        m_MethodName: backmainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &947043745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12802,7 +12814,7 @@ MonoBehaviour:
   dialogue: {fileID: 1185692530}
   textComponent: {fileID: 28126861}
   lines:
-  - 'Hi my Lord, an Umayyad attack is coming. '
+  - My Lord, The Umayyads are about to attack us !
   - Select and place your archery tower on highlighted boxes.
   textSpeed: 15
   isActive: 0
@@ -15207,7 +15219,7 @@ MonoBehaviour:
   dialogue: {fileID: 1128025474}
   textComponent: {fileID: 343920489}
   lines:
-  - I think he was just a spotter.
+  - I think they were scouts but be careful, others may have escaped.
   textSpeed: 15
 --- !u!1 &1428602370
 GameObject:

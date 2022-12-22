@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour
     public GameObject videoIntro;
     public GameObject lunchGame;
     public GameObject cameraMenu;
+    public GameObject fondu;
 
     [Space]
     [Header("Audio")]
@@ -35,6 +36,7 @@ public class Menu : MonoBehaviour
     private float volumeBO = 0f;
     private float maxVolumeBO = 0.09f;
     public AudioSource bandeOriginale;
+    private float timeToDelete = 3;
 
 
     private bool videoIsactive = false;
@@ -42,6 +44,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         
         audioSource = GetComponent<AudioSource>();
         fondLivreBataille.SetActive(false);
@@ -53,9 +56,12 @@ public class Menu : MonoBehaviour
 
         videoPlayer = GetComponent<VideoPlayer>();
 
+
     }
     private void Trigger(string trigger)
     {
+        
+
         if (book != null)
         {
             var animator = book.GetComponent<Animator>();
@@ -166,6 +172,12 @@ public class Menu : MonoBehaviour
     }
     private void Update()
     {
+        timeToDelete -= Time.deltaTime;
+        if (timeToDelete <= 0)
+        {
+            fondu.SetActive(false);
+        }
+
         bandeOriginale.volume = volumeBO;
 
         if (videoPlayer.isPlaying == false && videoIsactive == true )

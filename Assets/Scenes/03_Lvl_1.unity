@@ -6846,7 +6846,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 653042871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 869352651}
+        m_TargetAssemblyTypeName: PAuseMenu, Assembly-CSharp
+        m_MethodName: backmainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &653042871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8922,9 +8934,9 @@ MonoBehaviour:
   dialogue: {fileID: 1957645029}
   textComponent: {fileID: 418652546}
   lines:
-  - Ho noo he was not a spotter, the first wave is coming.
-  - Be careful, our spotter is warning us. The enemy has soldiers and archers, archers
-    can destroy our tower.
+  - "My lord, here are more\u2026.. oh wait, it\u2019s a whole army !!"
+  - "Be careful My Lord, our Sentinels let us know that among them they count   pikemans
+    and flaming arrows. Flames and buildings don\u2019t mix !"
   textSpeed: 15
   isActive: 0
 --- !u!95 &904587113
@@ -14337,8 +14349,8 @@ MonoBehaviour:
   dialogue: {fileID: 361170574}
   textComponent: {fileID: 221921984}
   lines:
-  - "I think we\u2019ve managed to push them back for now..."
-  - 'Eudes should be back with reinforcements soon. '
+  - My Lord, We managed to repel their attacks, but others will return...
+  - The Duke of Aquitaine should be back soon  with reinforcements.
   textSpeed: 15
 --- !u!95 &1375925480
 Animator:

@@ -2,25 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fonduScene : MonoBehaviour
+public class gameOverMenu : MonoBehaviour
 {
-    float timeToDelete = 350;
+    float timeToDelete = 3;
+    public GameObject fondu;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
         timeToDelete -= Time.deltaTime;
-        if(timeToDelete <= 0)
+        if (timeToDelete <= 0)
         {
-            gameObject.SetActive(false);
+            fondu.SetActive(false);
         }
-        
     }
-    
-    
 }

@@ -551,7 +551,6 @@ GameObject:
   - component: {fileID: 290647309}
   - component: {fileID: 290647308}
   - component: {fileID: 290647310}
-  - component: {fileID: 290647311}
   m_Layer: 5
   m_Name: Fondu
   m_TagString: Untagged
@@ -637,18 +636,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &290647311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290647306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d434f7cab8bfef41aef064aaf07826d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &409096627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1540,7 @@ MonoBehaviour:
   videoIntro: {fileID: 803657276}
   lunchGame: {fileID: 171895363}
   cameraMenu: {fileID: 1802306560}
+  fondu: {fileID: 290647306}
   pageQuiTourne: {fileID: 8300000, guid: 9279eebfe8aedd649a31f7218bb1f35e, type: 3}
   boutonValide: {fileID: 8300000, guid: 33c126ec7dbf7d64781d2ed14e45313a, type: 3}
   boutonRetour: {fileID: 8300000, guid: 1376bf312c57ce843bcdc4bc5fe12aa4, type: 3}

@@ -67,4 +67,12 @@ public class PAuseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         isActive = false;
     }
+    public void backmainMenu()
+    {
+        Time.timeScale = 1f;
+        WaveSpawner._enemyAlives = 0;
+        SceneManager.LoadScene(1);
+
+
+    }
 }

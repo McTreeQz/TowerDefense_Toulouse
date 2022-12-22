@@ -6,9 +6,26 @@ public class FadeETPA : MonoBehaviour
 {
     public float transitionTime = 10f;
 
+    public AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource.volume = 0.3f;
+    }
     void Update()
     {
         StartCoroutine(videoComplete());
+
+        if (audioSource.volume <= 0)
+        {
+            StartCoroutine(EaseIn());
+        }
+        if (audioSource.volume >= 0.3)
+        {
+            StopCoroutine(EaseIn());
+            audioSource.volume = 0.3f;
+            return;
+        }
 
 
     }
@@ -17,6 +34,16 @@ public class FadeETPA : MonoBehaviour
     {
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(1);
+    }
+    IEnumerator EaseIn()
+    {
+        if (audioSource.volume < 0.3)
+        {
+            yield return new WaitForSeconds(1);
+            audioSource.volume += 0.1f;
+        }
+        
+        
     }
 }
 

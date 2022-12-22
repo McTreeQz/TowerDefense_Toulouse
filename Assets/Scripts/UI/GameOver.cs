@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public Animator animator;
+
     public GameObject gameOver;
     private int sceneActuel;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         sceneActuel = SceneManager.GetActiveScene().buildIndex;
         gameOver.SetActive(false);
@@ -17,6 +19,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetInteger("isDeath", PlayerStats.healthPlayer);
         if (PlayerStats.healthPlayer <= 0)
         {
             death();
@@ -29,10 +32,7 @@ public class GameOver : MonoBehaviour
         gameOver.SetActive(true);
     }
 
-    public void BackMainMenu()
-    {
-        SceneManager.LoadScene(1);
-    }
+    
     public void restart()
     {
         Time.timeScale = 1f;
