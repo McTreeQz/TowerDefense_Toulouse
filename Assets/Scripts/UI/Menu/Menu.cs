@@ -24,6 +24,7 @@ public class Menu : MonoBehaviour
     public GameObject fondu;
     public GameObject option;
     public GameObject codex;
+    public GameObject Battle1218;
 
     [Space]
     [Header("Audio")]
@@ -54,6 +55,7 @@ public class Menu : MonoBehaviour
         videoIntro.SetActive(false);
         option.SetActive(false);
         codex.SetActive(false);
+        Battle1218.SetActive(false);
 
         battleMenu.SetActive(false);
         title.SetActive(true);
@@ -118,6 +120,7 @@ public class Menu : MonoBehaviour
         fondLivre.SetActive(true);
         option.SetActive(false);
         codex.SetActive(false);
+        Battle1218.SetActive(false);
         Tourne();
 
     }
@@ -149,8 +152,14 @@ public class Menu : MonoBehaviour
     
     public void battle1218()
     {
-        boutonBack();
+        battleMenu.SetActive(false);
+        boutonValid();
         Tourne();
+        fondLivreBataille.SetActive(false);
+        fondLivre.SetActive(false);
+        mainMenu.SetActive(false);
+        Battle1218.SetActive(true);
+        
         Debug.Log("1218");
     }
     public void battle1814()
