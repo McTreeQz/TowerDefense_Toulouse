@@ -4120,10 +4120,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Flasher le QR code au parc Raymond VI pour d\xE9bloquer cette bataille"
+  m_text: Flash the QR code at Raymond VI Park to unlock this battle.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bfe83cffa641dbc4b8919fcb2c0b5bd8, type: 2}
-  m_sharedMaterial: {fileID: -9147660025718589124, guid: bfe83cffa641dbc4b8919fcb2c0b5bd8,
+  m_fontAsset: {fileID: 11400000, guid: c545874f71c814d48a5609d4ee5b4543, type: 2}
+  m_sharedMaterial: {fileID: 1392304809032789612, guid: c545874f71c814d48a5609d4ee5b4543,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4148,8 +4148,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
