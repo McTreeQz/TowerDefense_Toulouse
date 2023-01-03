@@ -33,6 +33,10 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (outro == null)
+        {
+            return;
+        }
         Debug.Log(begin);
         begin = intro.GetComponent<IntroManager>().isActive;
         //Debug.Log(_enemyAlives);
