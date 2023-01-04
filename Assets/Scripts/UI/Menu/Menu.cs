@@ -61,6 +61,7 @@ public class Menu : MonoBehaviour
         codex.SetActive(false);
         credits.SetActive(false);
         Battle1218.SetActive(false);
+        
 
         battleMenu.SetActive(false);
         title.SetActive(true);
@@ -119,16 +120,16 @@ public class Menu : MonoBehaviour
     }
     public void BackMenu()
     {
-        mainMenuIsActive = true;
         boutonBack();
+        mainMenuIsActive = true;
         mainMenu.SetActive(true);
         battleMenu.SetActive(false);
         fondLivreBataille.SetActive(false);
         fondLivre.SetActive(true);
         option.SetActive(false);
         codex.SetActive(false);
-        Battle1218.SetActive(false);
         credits.SetActive(false);
+        Battle1218.SetActive(false);
         Tourne();
 
     }
@@ -246,6 +247,7 @@ public class Menu : MonoBehaviour
             }
 
         }
+
 
         bandeOriginale.volume = volumeBO;
 

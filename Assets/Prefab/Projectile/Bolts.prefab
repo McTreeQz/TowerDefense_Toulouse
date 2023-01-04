@@ -114,5 +114,5 @@ MonoBehaviour:
     type: 3}
   IANavMesh: {fileID: 0}
   speed: 70
-  degat: 3
+  degat: 4
   slow: 0

@@ -11322,7 +11322,7 @@ MonoBehaviour:
   CrossbowTower:
     prefab: {fileID: 1023952913298962000, guid: a07bd819f97193140817e0970af12026,
       type: 3}
-    cost: 150
+    cost: 180
   towerSelection: {fileID: 8300000, guid: cfa968b66a3a70c409e715f1ff92f6fe, type: 3}
 --- !u!114 &1002498738
 MonoBehaviour:
@@ -17733,7 +17733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f499d8671708cb418381fbf82067b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 70
+  startMoney: 130
   start_healthPlayer: 5
 --- !u!82 &1573132095
 AudioSource:

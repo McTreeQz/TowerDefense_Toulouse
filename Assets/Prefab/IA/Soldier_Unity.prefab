@@ -221,7 +221,7 @@ MonoBehaviour:
   NameTarget: Allies
   health: 0
   Range: 5
-  InitHealth: 3
+  InitHealth: 5
   care: 1
   degat: 1
   fireRate: 1

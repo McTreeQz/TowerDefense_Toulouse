@@ -165,7 +165,7 @@ MonoBehaviour:
   range: 12
   fireRate: 1
   fireCountDown: 0
-  health: 4
+  health: 20
   speedConstruct: 2
   soundFire: {fileID: 8300000, guid: 0769fff8664547c4ebc45159fd2c5ed5, type: 3}
   soundDeath: {fileID: 8300000, guid: 1ba23710a5362864f91bd41624b3d917, type: 3}

@@ -111,7 +111,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -143,7 +143,7 @@ MonoBehaviour:
   NameTarget: Tower
   health: 0
   Range: 10
-  InitHealth: 3
+  InitHealth: 4
   care: 1
   degat: 0
   fireRate: 1
