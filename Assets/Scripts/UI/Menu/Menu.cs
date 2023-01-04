@@ -24,6 +24,7 @@ public class Menu : MonoBehaviour
     public GameObject fondu;
     public GameObject option;
     public GameObject codex;
+    public GameObject credits;
     public GameObject Battle1218;
 
     [Space]
@@ -41,7 +42,10 @@ public class Menu : MonoBehaviour
     public AudioSource bandeOriginale;
     private float timeToDelete = 3;
 
+    private Vector2 startTouchPos;
+    private Vector2 endTouchPos;
 
+    private bool mainMenuIsActive = false;
     private bool videoIsactive = false;
     
 
@@ -55,6 +59,7 @@ public class Menu : MonoBehaviour
         videoIntro.SetActive(false);
         option.SetActive(false);
         codex.SetActive(false);
+        credits.SetActive(false);
         Battle1218.SetActive(false);
 
         battleMenu.SetActive(false);
@@ -109,10 +114,12 @@ public class Menu : MonoBehaviour
         boutonValid();
         Trigger("Open");
         title.SetActive(false);
+        mainMenuIsActive = true;
 
     }
     public void BackMenu()
     {
+        mainMenuIsActive = true;
         boutonBack();
         mainMenu.SetActive(true);
         battleMenu.SetActive(false);
@@ -121,11 +128,13 @@ public class Menu : MonoBehaviour
         option.SetActive(false);
         codex.SetActive(false);
         Battle1218.SetActive(false);
+        credits.SetActive(false);
         Tourne();
 
     }
     public void BattleMenu()
     {
+        mainMenuIsActive = false;
         boutonValid();
         Tourne();
         fondLivre.SetActive(false);
@@ -136,6 +145,7 @@ public class Menu : MonoBehaviour
     }
     public void battle721()
     {
+        mainMenuIsActive = false;
         //Trigger("start");
         //fondu.SetActive(true);
         maxVolumeBO = 0;
@@ -152,6 +162,7 @@ public class Menu : MonoBehaviour
     
     public void battle1218()
     {
+        mainMenuIsActive = false;
         battleMenu.SetActive(false);
         boutonValid();
         Tourne();
@@ -164,12 +175,14 @@ public class Menu : MonoBehaviour
     }
     public void battle1814()
     {
+        mainMenuIsActive = false;
         boutonBack();
         Tourne();
         Debug.Log("1814");
     }
     public void Option()
     {
+        mainMenuIsActive = false;
         boutonValid();
         Tourne();
         fondLivre.SetActive(false);
@@ -180,6 +193,7 @@ public class Menu : MonoBehaviour
     }
     public void Codex()
     {
+        mainMenuIsActive = false;
         boutonValid();
         Tourne();
         fondLivre.SetActive(false);
@@ -187,6 +201,13 @@ public class Menu : MonoBehaviour
         codex.SetActive(true);
 
         Debug.Log("1814");
+    }
+    void Credits()
+    {
+        Tourne();
+        fondLivre.SetActive(false);
+        mainMenu.SetActive(false);
+        credits.SetActive(true);
     }
     public void quit()
     {
@@ -205,6 +226,25 @@ public class Menu : MonoBehaviour
         if (timeToDelete <= 0)
         {
             fondu.SetActive(false);
+        }
+
+        if (mainMenuIsActive == true && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            startTouchPos = Input.GetTouch(0).position;
+        }
+
+        if (mainMenuIsActive == true && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            endTouchPos = Input.GetTouch(0).position;
+            if (endTouchPos.x < startTouchPos.x)
+            {
+                Credits();
+            }
+            if (endTouchPos.x > startTouchPos.x)
+            {
+                BackMenu();
+            }
+
         }
 
         bandeOriginale.volume = volumeBO;
