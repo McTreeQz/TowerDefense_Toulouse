@@ -1,5 +1,20 @@
 using UnityEngine;
 
+/// <summary>
+/// 
+/// Shop
+/// 
+///      
+/// 
+/// </summary>
+
+
+//Ce script permet de gérer le prix des tours dans l'inspecteur et le prefab associé. il transmet le prefab au buildManager.
+//
+//
+//
+//
+
 public class Shop : MonoBehaviour
 {
     public TowerCosts ArrowTower;

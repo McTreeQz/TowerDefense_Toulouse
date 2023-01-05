@@ -2,6 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// 
+/// BuildManager
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de gérer la contruction des towers. Il est liée au script "node"
+//
+//
+//
+//
+
 public class BuildManager : MonoBehaviour
 {
     #region Singleton

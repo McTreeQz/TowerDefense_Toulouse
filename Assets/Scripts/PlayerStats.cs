@@ -2,6 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// Stats
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de gérer les stats en haut à gauche dans le jeu. Ce script est accessible dans le GameManager
+//
+//
+//
+//
+
 public class PlayerStats : MonoBehaviour
 {
     public static int money;

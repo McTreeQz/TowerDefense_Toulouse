@@ -2,6 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// 
+/// Node
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de gérer la couleur des nodes mais aussi où on place les towers et si on peut en placer.
+//
+//
+//
+//
+
 public class node : MonoBehaviour
 {
     public GameObject constructionEffect;
@@ -9,7 +25,7 @@ public class node : MonoBehaviour
     public Vector3 positionOffset;
 
     [HideInInspector]
-    public GameObject turret;
+    public GameObject turret; //récuperé grâce au build manager
 
     private Color startColor;
     private Renderer rend;
@@ -23,11 +39,18 @@ public class node : MonoBehaviour
 
         buildManager = BuildManager.instance;
     }
+
     public Vector3 getBuildPosition()
     {
         return transform.position + positionOffset;
     }
-    
+
+
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+    // //                  Bouton                  //
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+
     private void OnMouseDown()
     {
         
@@ -44,7 +67,7 @@ public class node : MonoBehaviour
         }
 
         
-        buildManager.buildTowerOn(this);
+        buildManager.buildTowerOn(this); // contruit la tower selectionée sur la node choisis.
         
     }
 

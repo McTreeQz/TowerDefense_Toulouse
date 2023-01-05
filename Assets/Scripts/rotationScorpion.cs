@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+/// <summary>
+/// 
+/// RotationScorpion
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de gérer la rotation du scorpion dans le prefab Tower -> crossbow
+//
+//
+//
+//
+
 public class rotationScorpion : MonoBehaviour
 {
     public Transform scorpion;

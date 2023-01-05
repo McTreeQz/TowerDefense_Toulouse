@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+/// <summary>
+/// 
+/// Projectiles Tower & IA Archer
+/// 
+///     - Direction & speed
+///     - Effect     
+/// 
+/// </summary>
+
+
+//L'objectif du script est de créer les projectiles, leur attribué une trajectoire et des caractéristique techniques. 
+//
+//
+//
+//
+
+
 public class Arrow : MonoBehaviour
 {
     private Transform target;
@@ -17,10 +35,13 @@ public class Arrow : MonoBehaviour
 
     public void Seek(Transform _target)
     {
-        target = _target;
+        target = _target; // récupère le transform "target" du script Tower
     }
 
-    // Update is called once per frame
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+    // //            Direction & speed             //
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
     void Update()
     {
         if (target == null)
@@ -47,9 +68,11 @@ public class Arrow : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(ArrowBleeding, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         Destroy(gameObject);
-        
 
-       
+        // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+        // //                 Effect                   //
+        // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
         if (target.tag == "Tower")
         {
 

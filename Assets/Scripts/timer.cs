@@ -1,6 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 
+/// Timer
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de montrer visuellement le timer avant de pouvoir réutiliser les alliés.
+//
+//
+//
+//
+
 public class timer : MonoBehaviour
 {
     public Image Soldier_TimerSpawner;
@@ -20,9 +35,8 @@ public class timer : MonoBehaviour
 
     void Start() 
     {
-
+        // récupère le timer des soldats dans le script IA NAVMESH
         initiCraftTimer = prefab_artisan.GetComponent<AlliesSpawner>().timerCraftsman;
-
         initSoldierTimer = prefab_soldat.GetComponent<AlliesSpawner>().timerSoldier;
 
     }
@@ -49,11 +63,11 @@ public class timer : MonoBehaviour
             Soldier_TimerSpawner.enabled = true;
         }
 
-
+        // Permet de faire un décompte visuel //
         craftMan_TimeSpawner.fillAmount = carftTimer / initiCraftTimer;
         Soldier_TimerSpawner.fillAmount = SoldierTimer / initSoldierTimer;
 
-        // me permet d'avoir un chiffre entre 0 et 1 peut importe le chiffre de base.
+       
     }
 
 

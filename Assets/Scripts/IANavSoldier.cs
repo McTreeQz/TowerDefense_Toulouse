@@ -10,7 +10,10 @@ using UnityEngine.Audio;
 /// 
 /// IA des soldats sur le terrains.
 /// 
-/// 
+///     - Take Damage
+///     - Health system
+///     - Couroutines
+///     - FONCTIONS DE DEBUG  
 /// 
 /// </summary>
 
@@ -19,7 +22,7 @@ using UnityEngine.Audio;
 //
 //
 //Le code est modulaire et permet d'être utilisé pour les ennemis mais aussi les alliés
-//Peut être que je devrais faire CA plutot comme CA mais pour l'instant voila...
+//J'ai des soucis avec les IA archer ennemis. Je dois leur affilié le code 'tower'
 
 public class IANavSoldier : MonoBehaviour{
 
@@ -135,7 +138,7 @@ public class IANavSoldier : MonoBehaviour{
                 }
                 
             }
-            else if (target.tag == "Tower" && gameObject.CompareTag("Ennemie"))
+            else if (target.tag == "Tower" && gameObject.CompareTag("Ennemie")) // Code pour un bélier pas encore implanté
             {
                 if (fireCountDown <= 0 && target != null)
                 {
@@ -146,7 +149,7 @@ public class IANavSoldier : MonoBehaviour{
                 }
 
             }
-            else if (target.tag == "Tower" && gameObject.CompareTag("Allies"))
+            else if (target.tag == "Tower" && gameObject.CompareTag("Allies")) // soigneur
             {
                 if (fireCountDown <= 0 && target != null && target.GetComponent<Tower>().health <= target.GetComponent<HealthBarTower>().InitHealth)
                 {
@@ -179,17 +182,20 @@ public class IANavSoldier : MonoBehaviour{
 
         healthbar.fillAmount = health / InitHealth;
 
-        if (agent.remainingDistance <= 1)
+        if (agent.remainingDistance <= 1 && gameObject.CompareTag("Ennemie")) // perte de vie du joueur 
         {
-            if (gameObject.CompareTag("Ennemie"))
+            if (gameObject.CompareTag("Allies"))
             {
-                PlayerStats.healthPlayer--;
-                WaveSpawner._enemyAlives--;
-                Destroy(gameObject);
+                return;
             }
+      
+            PlayerStats.healthPlayer--;
+            WaveSpawner._enemyAlives--;
+            Destroy(gameObject);
+            
         }
 
-        if (health <= 0 && gameObject.CompareTag("Ennemie") && enemyDeathPlaying == false)
+        if (health <= 0 && gameObject.CompareTag("Ennemie") && enemyDeathPlaying == false) 
         {
 
             enemyDeathPlaying = true;
@@ -205,6 +211,10 @@ public class IANavSoldier : MonoBehaviour{
 
         }
     }
+
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+    // //               Couroutines                //
+    // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 
     IEnumerator death()
     {
@@ -223,6 +233,8 @@ public class IANavSoldier : MonoBehaviour{
         yield return new WaitForSeconds(4.8f);
         
     }
+
+
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //            FONCTIONS DE DEBUG            //
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/

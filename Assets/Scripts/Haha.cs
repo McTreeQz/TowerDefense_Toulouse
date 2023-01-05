@@ -3,6 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+/// <summary>
+/// 
+/// HAha
+/// 
+///      
+/// 
+/// </summary>
+
+
+//L'objectif du script est de créer un 'Haha'. Un system de défense qui bloque l'avancer des ennemis. 
+// malheureusement la feature ne sera pas utilisée pour le proto...
+//
+//
+//
+
 [RequireComponent(typeof(NavMeshObstacle))]
 
 public class Haha : MonoBehaviour

@@ -2,6 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// Swipe
+/// 
+///      
+/// 
+/// </summary>
+
+
+//Permet de changer de page, le script est utilisé dans la gestion dans le menu pour accerder au credits.
+//
+//
+//
+//
+
 public class Swipe : MonoBehaviour
 {
     public GameObject menu;
