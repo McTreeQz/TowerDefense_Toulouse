@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-
+using Unity.VisualScripting;
 
 /// <summary>
 /// 
@@ -17,6 +17,9 @@ using UnityEngine.Audio;
 /// 
 /// </summary>
 
+
+
+public enum UnitType { Enemy, Ally }
 
 //L'objectif de ce script est de donner aux ennemis et aux alliés la capacité d'utiliser un navmesh afin de s'orienter dans l'espace
 //
@@ -67,6 +70,11 @@ public class IANavSoldier : MonoBehaviour{
     public AudioClip EnnemyDeath    =null;
     public AudioClip AlliesDeath    =null;
     public AudioClip GainMoney      =null;
+
+
+
+    [SerializeField]
+    public UnitType unitType = UnitType.Enemy;
 
 
     private void Awake()
@@ -182,18 +190,7 @@ public class IANavSoldier : MonoBehaviour{
 
         healthbar.fillAmount = health / InitHealth;
 
-        if (agent.remainingDistance <= 1 && gameObject.CompareTag("Ennemie")) // perte de vie du joueur 
-        {
-            if (gameObject.CompareTag("Allies"))
-            {
-                return;
-            }
       
-            PlayerStats.healthPlayer--;
-            WaveSpawner._enemyAlives--;
-            Destroy(gameObject);
-            
-        }
 
         if (health <= 0 && gameObject.CompareTag("Ennemie") && enemyDeathPlaying == false) 
         {
@@ -211,7 +208,7 @@ public class IANavSoldier : MonoBehaviour{
 
         }
     }
-
+    
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
     // //               Couroutines                //
     // */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
@@ -244,4 +241,52 @@ public class IANavSoldier : MonoBehaviour{
     {
         Gizmos.DrawWireSphere(transform.position, Range);
     }
+
+
+
+
+    public void ArrivedAtWall()
+    {
+        switch (unitType)
+        {
+            case UnitType.Enemy:
+
+                HurtPlayer();
+
+
+                break;
+
+            case UnitType.Ally:
+
+
+                DoSommersault();
+
+
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+
+    private void DoSommersault()
+    {
+        //jsrl
+
+    }
+
+
+    public void HurtPlayer()
+    {
+        // perte de vie du joueur 
+        
+            PlayerStats.healthPlayer--;
+            WaveSpawner._enemyAlives--;
+            Destroy(gameObject);
+
+        
+    }
+
 }
