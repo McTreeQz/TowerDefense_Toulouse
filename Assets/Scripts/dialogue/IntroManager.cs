@@ -10,6 +10,7 @@ public class IntroManager : MonoBehaviour
 {
     public GameObject GameManager;
     public GameObject PrepareYDef;
+    public GameObject tuto;
     
     public GameObject dialogue;
     public TextMeshProUGUI textComponent;
@@ -86,10 +87,28 @@ public class IntroManager : MonoBehaviour
       }
       else
       {
-            PrepareYDef.SetActive(true);
-            dialogue.SetActive(false);
-            isActive = true;
+            if(tuto != null)
+            {
+                tuto.SetActive(true);
+                dialogue.SetActive(false);
+            }
+            else
+            {
+                
+                PrepareYDef.SetActive(true);
+                isActive = true;
+                dialogue.SetActive(false);
+            }
+            
+            
       }
 
     }
+    public void playGame()
+    {
+        tuto.SetActive(false);
+        PrepareYDef.SetActive(true);
+        isActive = true;
+    }
+
 }
