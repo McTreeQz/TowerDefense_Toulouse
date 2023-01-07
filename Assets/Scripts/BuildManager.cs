@@ -36,6 +36,7 @@ public class BuildManager : MonoBehaviour
 
     
     public GameObject ConstructionEffect;
+    public GameObject NoMoney;
 
     public AudioClip soundBuild = null;
     private AudioSource audiosource;
@@ -62,7 +63,10 @@ public class BuildManager : MonoBehaviour
     }
     public void buildTowerOn(node node)
     {
-        
+        if (PlayerStats.money < TourToBuild.cost)
+        {
+            NoMoney.SetActive(true);
+        }
         
 
         if (PlayerStats.money >= TourToBuild.cost)

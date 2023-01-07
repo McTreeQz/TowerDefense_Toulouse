@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fonduScene : MonoBehaviour
 {
-    float timeToDelete = 350;
+    float timeToDelete = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,9 @@ public class fonduScene : MonoBehaviour
         timeToDelete -= Time.deltaTime;
         if(timeToDelete <= 0)
         {
+            timeToDelete = 1;
             gameObject.SetActive(false);
+            
         }
         
     }

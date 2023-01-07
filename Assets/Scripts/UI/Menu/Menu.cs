@@ -124,7 +124,7 @@ public class Menu : MonoBehaviour
         mainMenuIsActive = true;
         mainMenu.SetActive(true);
         battleMenu.SetActive(false);
-        fondLivreBataille.SetActive(false);
+        
         fondLivre.SetActive(true);
         option.SetActive(false);
         codex.SetActive(false);
@@ -140,7 +140,7 @@ public class Menu : MonoBehaviour
         Tourne();
         fondLivre.SetActive(false);
         mainMenu.SetActive(false);
-        fondLivreBataille.SetActive(true);
+        
         battleMenu.SetActive(true);
 
     }

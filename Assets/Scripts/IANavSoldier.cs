@@ -31,10 +31,12 @@ public class IANavSoldier : MonoBehaviour{
 
     [Space]
     [Header("References")]
-    public Transform    movePositionTarget;
-    public Image        healthbar;
-    public Canvas       Canvas_healthbar;
-    public GameObject   arrow;
+    public Transform        movePositionTarget;
+    public Image            healthbar;
+    public Canvas           Canvas_healthbar;
+    public GameObject       arrow;
+    public GameObject       money;
+    private MeshRenderer    meshRenderer;
 
     public string NameTarget = "";      // Nom du tag pour récupérer la cible
 
@@ -45,8 +47,8 @@ public class IANavSoldier : MonoBehaviour{
     private GameObject[]     Ennemy;
     private NavMeshAgent     agent;
 
-    private bool enemyDeathPlaying = false;
-    private bool fightPlaying = false;
+    private bool enemyDeathPlaying  = false;
+    private bool fightPlaying       = false;
 
 
     public  float           health;
@@ -84,7 +86,7 @@ public class IANavSoldier : MonoBehaviour{
         health = InitHealth;
 
         audioSource = GetComponent<AudioSource>();
-        
+        meshRenderer = GetComponent<MeshRenderer>();
         
     }
     
@@ -215,6 +217,8 @@ public class IANavSoldier : MonoBehaviour{
 
     IEnumerator death()
     {
+        meshRenderer.enabled = false;
+        money.SetActive(true);
         //agent.destination = agent.transform.position;
         audioSource.PlayOneShot(EnnemyDeath);
         yield return new WaitForSeconds(0.3f);

@@ -11,7 +11,7 @@ using UnityEngine;
 /// </summary>
 
 
-//Permet de changer de page, le script est utilisé dans la gestion dans le menu pour accerder au credits.
+//Permet de changer de page en swipant droite et gauche, il peut être utilisé partout dans le menu.
 //
 //
 //
@@ -19,20 +19,25 @@ using UnityEngine;
 
 public class Swipe : MonoBehaviour
 {
-    public GameObject menu;
-    public GameObject Lyrics;
+    public GameObject[] pages;
+
+    public AudioClip pageQuiTourne;
+    private AudioSource audioSource;
 
     private Vector2 startTouchPos;
     private Vector2 endTouchPos;
+
+    private int index;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(index);
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             startTouchPos = Input.GetTouch(0).position;
@@ -43,21 +48,44 @@ public class Swipe : MonoBehaviour
             endTouchPos = Input.GetTouch(0).position;
             if(endTouchPos.x < startTouchPos.x)
             {
-                Credits();
+                if (index == pages.Length-1)
+                {
+                    return;
+                }
+                changePagePlus();
             }
             if (endTouchPos.x > startTouchPos.x)
             {
-                Menu();
+                if (index == 0)
+                {
+                    return;
+                }
+                changePageLess();
             }
 
         }
     }
-    void Credits()
+    void changePagePlus()
     {
+        
+
+        pages[index].SetActive(false);
+        index++;
+        audioSource.PlayOneShot(pageQuiTourne);
+        pages[index].SetActive(true);
+        
+        
 
     }
-    void Menu()
+    void changePageLess()
     {
+        
+
+        pages[index].SetActive(false);
+        index--;
+        audioSource.PlayOneShot(pageQuiTourne);
+        pages[index].SetActive(true);
+        
 
     }
 }
