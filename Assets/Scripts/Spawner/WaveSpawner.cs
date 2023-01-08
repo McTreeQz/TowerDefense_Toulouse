@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public GameObject intro;
     public GameObject outro;
+    public GameObject anecdcote;
     public static int _enemyAlives = 0;
 
     private WaveStats  waveStats;
@@ -23,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]
     private Text waveCountDown;
 
-    private int waveNumber = 0;
+    public int waveNumber = 0;
     //private int enemyNumber = 0;
 
     private bool begin = false;
@@ -33,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Debug.Log(begin);
         begin = intro.GetComponent<IntroManager>().isActive;
         //Debug.Log(_enemyAlives);
@@ -50,6 +52,18 @@ public class WaveSpawner : MonoBehaviour
                 countdown = timeBetweenWaves;
                 return;
 
+            }
+            if(countdown >= 0f)
+            {
+                if (anecdcote == null)
+                {
+                    return;
+                }
+                if (waveNumber == 2)
+                {
+                    anecdcote.SetActive(true);
+                    StartCoroutine(anecdocte());
+                }
             }
 
             countdown -= Time.deltaTime;
@@ -82,8 +96,12 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveNumber++;
+    }
 
-       
+    IEnumerator anecdocte()
+    {
+        yield return new WaitForSeconds(10);
+        anecdcote.SetActive(false);
     }
     
 
@@ -93,4 +111,5 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         _enemyAlives++;
     }
+
 }
