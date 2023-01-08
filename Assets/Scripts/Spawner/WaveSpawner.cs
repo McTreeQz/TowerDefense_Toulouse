@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField]
     private Text waveCountDown;
 
-    public int waveNumber = 0;
+    private int waveNumber = 0;
     //private int enemyNumber = 0;
 
     private bool begin = false;
@@ -53,18 +53,7 @@ public class WaveSpawner : MonoBehaviour
                 return;
 
             }
-            if(countdown >= 0f)
-            {
-                if (anecdcote == null)
-                {
-                    return;
-                }
-                if (waveNumber == 2)
-                {
-                    anecdcote.SetActive(true);
-                    StartCoroutine(anecdocte());
-                }
-            }
+            
 
             countdown -= Time.deltaTime;
             countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
@@ -77,6 +66,18 @@ public class WaveSpawner : MonoBehaviour
                 outro.SetActive(true);
 
 
+            }
+            if (countdown >= 0f)
+            {
+                if (anecdcote == null)
+                {
+                    return;
+                }
+                if (waveNumber == 2)
+                {
+                    anecdcote.SetActive(true);
+                    StartCoroutine(Anecdocte());
+                }
             }
 
         }
@@ -98,7 +99,7 @@ public class WaveSpawner : MonoBehaviour
         waveNumber++;
     }
 
-    IEnumerator anecdocte()
+    IEnumerator Anecdocte()
     {
         yield return new WaitForSeconds(10);
         anecdcote.SetActive(false);

@@ -148,7 +148,7 @@ MonoBehaviour:
   tagTarget: Ennemie
   tagTarget2: 
   FirePoint: {fileID: 2457367778651689109}
-  range: 15
+  range: 16
   fireRate: 0.5
   fireCountDown: 0
   health: 30

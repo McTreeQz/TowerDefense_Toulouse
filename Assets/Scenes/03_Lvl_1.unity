@@ -15839,7 +15839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437329667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.097523, y: -1.36, z: -19.827272}
+  m_LocalPosition: {x: 19.097523, y: -1.1, z: -19.827272}
   m_LocalScale: {x: 1, y: 0.14957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17159,7 +17159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intro: {fileID: 904587111}
   outro: {fileID: 361170574}
-  anecdcote: {fileID: 0}
+  anecdcote: {fileID: 777491900}
   waves:
   - enemy:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
@@ -17196,7 +17196,6 @@ MonoBehaviour:
   spawnPoint: {fileID: 948229124}
   timeBetweenWaves: 10
   waveCountDown: {fileID: 128281646}
-  waveNumber: 0
   End: 0
 --- !u!4 &1573132090
 Transform:
@@ -21140,7 +21139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910542871}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.970018, y: -1.34, z: -22.410128}
+  m_LocalPosition: {x: 17.970018, y: -1.07, z: -22.410128}
   m_LocalScale: {x: 1, y: 0.14957, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

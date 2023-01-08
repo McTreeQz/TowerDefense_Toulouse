@@ -5690,9 +5690,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "In MEN and BRAVERY, each Great Battle is composed of 3 PHASES. In this
-    beta, only 2 phases will be available. \n\nYou will have to have to DEFEND your
-    WALLS against a horde of enemies. \n\nDEFEATING an enemy brings you ecus. Ecus
-    allow you to buy TOWERS. \n\r\nBe strong, be Brave. \r\nDev Team"
+    beta, only 2 phases will be available. \n\nYou will have to DEFEND your WALLS
+    against a horde of enemies. \n\nDEFEATING an enemy brings you ecus. Ecus allow
+    you to buy TOWERS. \n\r\nBe strong, be Brave. \r\nDev Team"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57c263145a638d54584a9efdeaef1df9, type: 2}
   m_sharedMaterial: {fileID: -34857974146009569, guid: 57c263145a638d54584a9efdeaef1df9,
@@ -17942,6 +17942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intro: {fileID: 1197552970}
   outro: {fileID: 1128025474}
+  anecdcote: {fileID: 0}
   waves:
   - enemy:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
