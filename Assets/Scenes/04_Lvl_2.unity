@@ -5518,6 +5518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b4cc15bc09af94faa2400348643045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intro: {fileID: 453298646}
 --- !u!95 &453298649
 Animator:
   serializedVersion: 4
@@ -19014,7 +19015,7 @@ MonoBehaviour:
   craftMan_TimeSpawner: {fileID: 1575321571}
   spawnPointSoldier: {fileID: 1123860820}
   spawnPointCraftsman: {fileID: 588649239}
-  timerCraftsman: 3
+  timerCraftsman: 10
   initTimerCraftMan: 0
   craftmanspawner: {fileID: 1365764030}
   timerSoldier: 20
