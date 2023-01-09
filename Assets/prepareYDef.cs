@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class prepareYDef : MonoBehaviour
 {
+    public GameObject intro;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class prepareYDef : MonoBehaviour
     IEnumerator fadeOut()
     {
         yield return new WaitForSeconds(5f);
-        gameObject.SetActive(false);
+        intro.SetActive(false);
     }
 }

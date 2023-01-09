@@ -17184,8 +17184,6 @@ MonoBehaviour:
   - enemy:
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
-    - {fileID: 3907221442312435607, guid: 2a2aacb86eb561c4c9019c0a1898e7f4, type: 3}
-    - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}
     - {fileID: 3907221442312435607, guid: 794e94e69f2eb8c41b75ea83c2e39fc6, type: 3}

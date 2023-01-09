@@ -15345,7 +15345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 51539207}
-  GameManager: {fileID: 0}
+  GameManager: {fileID: 1573132088}
 --- !u!222 &1336067932
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19354,6 +19354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b4cc15bc09af94faa2400348643045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intro: {fileID: 1530035649}
 --- !u!95 &1734738893
 Animator:
   serializedVersion: 4
